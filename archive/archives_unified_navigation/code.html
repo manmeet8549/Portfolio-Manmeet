@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-dim": "#44546a",
+              "surface": "#f9f9f9",
+              "on-error-container": "#752121",
+              "secondary-dim": "#535353",
+              "on-primary": "#f8f7ff",
+              "tertiary": "#506076",
+              "on-tertiary-fixed": "#29394e",
+              "tertiary-container": "#c8d8f3",
+              "on-primary-fixed": "#003798",
+              "on-secondary-fixed-variant": "#5b5b5b",
+              "surface-container-highest": "#dde4e5",
+              "error": "#9f403d",
+              "surface-container-low": "#f2f4f4",
+              "on-tertiary": "#f7f9ff",
+              "on-secondary": "#f9f9f9",
+              "on-surface-variant": "#596061",
+              "on-tertiary-container": "#3c4c61",
+              "outline-variant": "#acb3b4",
+              "inverse-on-surface": "#9c9d9d",
+              "secondary-fixed": "#e2e2e2",
+              "tertiary-fixed": "#c8d8f3",
+              "secondary": "#5f5f5f",
+              "on-secondary-fixed": "#3f3f3f",
+              "surface-container-lowest": "#ffffff",
+              "primary": "#0053db",
+              "inverse-surface": "#0c0f0f",
+              "surface-dim": "#d3dbdd",
+              "outline": "#757c7d",
+              "background": "#f9f9f9",
+              "primary-fixed": "#dbe1ff",
+              "surface-bright": "#f9f9f9",
+              "surface-container-high": "#e4e9ea",
+              "on-primary-fixed-variant": "#0050d4",
+              "on-surface": "#2d3435",
+              "primary-dim": "#0048c1",
+              "primary-container": "#dbe1ff",
+              "surface-variant": "#dde4e5",
+              "on-tertiary-fixed-variant": "#46556b",
+              "secondary-container": "#e2e2e2",
+              "error-dim": "#4e0309",
+              "tertiary-fixed-dim": "#bacae4",
+              "primary-fixed-dim": "#c7d3ff",
+              "error-container": "#fe8983",
+              "on-background": "#2d3435",
+              "surface-container": "#ebeeef",
+              "on-secondary-container": "#525252",
+              "on-error": "#fff7f6",
+              "surface-tint": "#0053db",
+              "on-primary-container": "#0048bf",
+              "inverse-primary": "#618bff",
+              "secondary-fixed-dim": "#d4d4d4"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 1.25rem;
+        }
+        body {
+            background-color: #f9f9f9;
+            color: #2d3435;
+            -webkit-font-smoothing: antialiased;
+        }
+        .archive-row:hover .folder-icon {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .grid-guide {
+            background-image: linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px);
+            background-size: 8.333333% 100%;
+        }
+    </style>
+<style>
+    .border-heavy-b { border-bottom: 1px solid #000; }
+    .font-mono { font-family: 'Space Mono', monospace; }
+</style><link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/></head>
+<body class="font-body selection:bg-primary selection:text-white">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white border-heavy-b">
+<div class="flex items-center w-full px-6 py-4 md:px-8">
+<div class="flex-1">
+<div class="text-xl font-black tracking-tighter uppercase font-mono"><a href="../portfolio_nav_linked/code.html">MANMEET SINGH</a></div>
+</div>
+<div class="hidden md:flex flex-1 justify-center items-center space-x-12 font-mono text-sm uppercase font-bold">
+<a class="hover:text-primary transition-colors" href="../about_nav_linked/code.html">About</a>
+<a class="text-primary" href="../projects_nav_linked/code.html">Projects</a>
+<a class="hover:text-primary transition-colors" href="../studio_updated_portrait_alignment/code.html">Studio</a>
+<a class="hover:text-primary transition-colors" href="../contact_nav_linked/code.html">Contact</a>
+</div>
+<div class="flex flex-1 justify-end items-center space-x-4">
+<a class="hidden md:block border border-black bg-white text-black px-4 py-2 font-mono text-xs font-bold uppercase hover:bg-primary hover:text-white hover:border-primary transition-colors" href="#">
+        Linkedin
+    </a>
+<a class="hidden md:block border border-black bg-white text-black px-4 py-2 font-mono text-xs font-bold uppercase hover:bg-primary hover:text-white hover:border-primary transition-colors" href="#">
+        Github
+    </a>
+<a href="../contact_nav_linked/code.html" class="hidden md:block bg-black text-white px-6 py-2 font-mono text-xs font-bold uppercase hover:bg-primary transition-colors inline-block text-center pt-[10px]">Inquiry →</a>
+<button id="mobile-menu-btn" class="block md:hidden text-black focus:outline-none ml-4 sm:ml-4 relative z-[60] p-2" aria-label="Toggle Menu">
+    <span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="relative min-h-screen pt-40 pb-24 px-8 overflow-hidden">
+<!-- Background Grid Guide -->
+<div class="absolute inset-0 grid-guide pointer-events-none opacity-50"></div>
+<div class="max-w-7xl mx-auto relative z-10">
+<!-- Header Section -->
+<header class="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div>
+<span class="label-md uppercase tracking-[0.2em] text-primary font-bold mb-4 block" style="">PORTFOLIO INDEX</span>
+<h1 class="text-[5rem] md:text-[8rem] lg:text-[10rem] font-black leading-[0.85] tracking-tighter uppercase text-zinc-900" style="">
+                        ARCHIVES
+                    </h1>
+</div>
+<div class="md:text-right">
+<p class="max-w-xs md:ml-auto text-zinc-500 text-sm font-medium leading-relaxed uppercase tracking-wider" style="">
+                        A curated selection of experiments, commercial projects, and digital artifacts developed over the last cycle.
+                    </p>
+</div>
+</header>
+<!-- Year Section -->
+<section class="mb-32">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-0 border-y border-zinc-200">
+<div class="md:col-span-4 py-12 border-r border-zinc-200">
+<h2 class="text-4xl font-bold tracking-tighter text-zinc-900" style="">2022 — 2024</h2>
+</div>
+<div class="md:col-span-8 py-12 px-0 md:px-12 flex items-center">
+<div class="flex gap-12">
+<div class="flex flex-col">
+<span class="text-[0.65rem] font-bold tracking-[0.15em] text-zinc-400 uppercase mb-2" style="">Total Entries</span>
+<span class="text-2xl font-black text-zinc-900" style="">32</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[0.65rem] font-bold tracking-[0.15em] text-zinc-400 uppercase mb-2" style="">Categories</span>
+<span class="text-2xl font-black text-zinc-900" style="">08</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[0.65rem] font-bold tracking-[0.15em] text-zinc-400 uppercase mb-2" style="">Status</span>
+<span class="text-2xl font-black text-primary" style="">ACTIVE</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Project List (Database Table Style) -->
+<section class="flex flex-col">
+<!-- Table Header -->
+<div class="hidden md:grid grid-cols-12 px-6 py-4 border-b border-zinc-300 bg-zinc-100 text-[0.65rem] font-black tracking-[0.2em] text-zinc-500 uppercase">
+<div class="col-span-1" style="">REF</div>
+<div class="col-span-6" style="">PROJECT NAME</div>
+<div class="col-span-3" style="">CATEGORY</div>
+<div class="col-span-2 text-right" style="">YEAR</div>
+</div>
+<!-- Archive Rows -->
+<div class="divide-y divide-zinc-200">
+<!-- Item 1 -->
+<div class="archive-row group grid grid-cols-6 md:grid-cols-12 items-center px-6 py-10 cursor-pointer transition-all duration-300 hover:bg-zinc-900">
+<div class="hidden md:block col-span-1 text-[0.7rem] font-mono text-zinc-400 group-hover:text-zinc-500 transition-colors" style="">001</div>
+<div class="col-span-4 md:col-span-6 flex items-center gap-4">
+<span class="text-xl md:text-3xl font-bold tracking-tight text-zinc-900 group-hover:text-white transition-colors" style="">TEST-GUARD</span>
+</div>
+<div class="col-span-2 md:col-span-3">
+<span class="text-[0.65rem] tracking-[0.1em] font-medium text-zinc-500 uppercase py-1 px-3 border border-zinc-200 group-hover:border-zinc-700 group-hover:text-zinc-400 transition-colors" style="">EXPERIMENTAL / ONLINE APPLICATION</span>
+</div>
+<div class="hidden lg:flex col-span-2 justify-end items-center gap-8">
+<span class="text-sm font-bold text-zinc-400 group-hover:text-zinc-500" style="">2026</span>
+<span class="material-symbols-outlined folder-icon text-white opacity-0 -translateX-4 transition-all duration-300" data-icon="folder_open" style="">folder_open</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="archive-row group grid grid-cols-6 md:grid-cols-12 items-center px-6 py-10 cursor-pointer transition-all duration-300 hover:bg-zinc-900">
+<div class="hidden md:block col-span-1 text-[0.7rem] font-mono text-zinc-400 group-hover:text-zinc-500" style="">002</div>
+<div class="col-span-4 md:col-span-6 flex items-center gap-4">
+<span class="text-xl md:text-3xl font-bold tracking-tight text-zinc-900 group-hover:text-white transition-colors" style="">PORTFOLIO</span>
+</div>
+<div class="col-span-2 md:col-span-3">
+<span class="text-[0.65rem] tracking-[0.1em] font-medium text-zinc-500 uppercase py-1 px-3 border border-zinc-200 group-hover:border-zinc-700 group-hover:text-zinc-400 transition-colors" style="">WEBSITE</span>
+</div>
+<div class="hidden lg:flex col-span-2 justify-end items-center gap-8">
+<span class="text-sm font-bold text-zinc-400 group-hover:text-zinc-500" style="">2026</span>
+<span class="material-symbols-outlined folder-icon text-white opacity-0 -translateX-4 transition-all duration-300" data-icon="folder_open" style="">folder_open</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="archive-row group grid grid-cols-6 md:grid-cols-12 items-center px-6 py-10 cursor-pointer transition-all duration-300 hover:bg-zinc-900">
+<div class="hidden md:block col-span-1 text-[0.7rem] font-mono text-zinc-400 group-hover:text-zinc-500" style="">003</div>
+<div class="col-span-4 md:col-span-6 flex items-center gap-4">
+<span class="text-xl md:text-3xl font-bold tracking-tight text-zinc-900 group-hover:text-white transition-colors" style="">22 G ROOFING</span>
+</div>
+<div class="col-span-2 md:col-span-3">
+<span class="text-[0.65rem] tracking-[0.1em] font-medium text-zinc-500 uppercase py-1 px-3 border border-zinc-200 group-hover:border-zinc-700 group-hover:text-zinc-400 transition-colors" style="">WEBSITE</span>
+</div>
+<div class="hidden lg:flex col-span-2 justify-end items-center gap-8">
+<span class="text-sm font-bold text-zinc-400 group-hover:text-zinc-500" style="">2026</span>
+<span class="material-symbols-outlined folder-icon text-white opacity-0 -translateX-4 transition-all duration-300" data-icon="folder_open" style="">folder_open</span>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="archive-row group grid grid-cols-6 md:grid-cols-12 items-center px-6 py-10 cursor-pointer transition-all duration-300 hover:bg-zinc-900">
+<div class="hidden md:block col-span-1 text-[0.7rem] font-mono text-zinc-400 group-hover:text-zinc-500" style="">004</div>
+<div class="col-span-4 md:col-span-6 flex items-center gap-4">
+<span class="text-xl md:text-3xl font-bold tracking-tight text-zinc-900 group-hover:text-white transition-colors" style="">NIROG ORGANIC</span>
+</div>
+<div class="col-span-2 md:col-span-3">
+<span class="text-[0.65rem] tracking-[0.1em] font-medium text-zinc-500 uppercase py-1 px-3 border border-zinc-200 group-hover:border-zinc-700 group-hover:text-zinc-400 transition-colors" style="">WEBSITE / PRODUCT DESIGNING</span>
+</div>
+<div class="hidden lg:flex col-span-2 justify-end items-center gap-8">
+<span class="text-sm font-bold text-zinc-400 group-hover:text-zinc-500" style="">2025</span>
+<span class="material-symbols-outlined folder-icon text-white opacity-0 -translateX-4 transition-all duration-300" data-icon="folder_open" style="">folder_open</span>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="archive-row group grid grid-cols-6 md:grid-cols-12 items-center px-6 py-10 cursor-pointer transition-all duration-300 hover:bg-zinc-900">
+<div class="hidden md:block col-span-1 text-[0.7rem] font-mono text-zinc-400 group-hover:text-zinc-500" style="">005</div>
+<div class="col-span-4 md:col-span-6 flex items-center gap-4">
+<span class="text-xl md:text-3xl font-bold tracking-tight text-zinc-900 group-hover:text-white transition-colors" style="">TEMPERATURE AND HUMIDITY</span>
+</div>
+<div class="col-span-2 md:col-span-3">
+<span class="text-[0.65rem] tracking-[0.1em] font-medium text-zinc-500 uppercase py-1 px-3 border border-zinc-200 group-hover:border-zinc-700 group-hover:text-zinc-400 transition-colors" style="">wEBPAGE</span>
+</div>
+<div class="hidden lg:flex col-span-2 justify-end items-center gap-8">
+<span class="text-sm font-bold text-zinc-400 group-hover:text-zinc-500" style="">2025</span>
+<span class="material-symbols-outlined folder-icon text-white opacity-0 -translateX-4 transition-all duration-300" data-icon="folder_open" style="">folder_open</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom CTA Section -->
+<section class="mt-32 p-16 bg-surface-container-low flex flex-col items-center text-center">
+<span class="text-[0.65rem] font-bold tracking-[0.3em] text-zinc-400 uppercase mb-8" style="">NEXT PHASE</span>
+<h3 class="text-4xl md:text-6xl font-black text-zinc-900 mb-12 max-w-2xl leading-tight" style="">INTERESTED IN COLLABORATION?</h3>
+<button class="bg-zinc-900 text-white px-12 py-5 text-sm font-bold tracking-widest uppercase hover:bg-primary transition-colors duration-300" style="">
+                    GET IN TOUCH
+                </button>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-8 bg-zinc-50 dark:bg-zinc-950">
+<div class="text-lg font-black text-zinc-900 dark:text-zinc-50 uppercase" style="">MANMEET SINGH</div>
+<div class="flex gap-8">
+<a class="font-['Inter'] uppercase text-[0.65rem] tracking-[0.1em] font-medium text-zinc-400 dark:text-zinc-500 hover:text-blue-700 dark:hover:text-blue-500 underline decoration-2 underline-offset-4 transition-all duration-300 ease-in-out" href="#" style="">LINKEDIN</a>
+<a class="font-['Inter'] uppercase text-[0.65rem] tracking-[0.1em] font-medium text-zinc-400 dark:text-zinc-500 hover:text-blue-700 dark:hover:text-blue-500 underline decoration-2 underline-offset-4 transition-all duration-300 ease-in-out" href="#" style="">GITHUB</a>
+<a class="font-['Inter'] uppercase text-[0.65rem] tracking-[0.1em] font-medium text-zinc-400 dark:text-zinc-500 hover:text-blue-700 dark:hover:text-blue-500 underline decoration-2 underline-offset-4 transition-all duration-300 ease-in-out" href="#" style="">TWITTER</a>
+<a class="font-['Inter'] uppercase text-[0.65rem] tracking-[0.1em] font-medium text-zinc-400 dark:text-zinc-500 hover:text-blue-700 dark:hover:text-blue-500 underline decoration-2 underline-offset-4 transition-all duration-300 ease-in-out" href="#" style="">INSTAGRAM</a>
+</div>
+<div class="font-['Inter'] uppercase text-[0.65rem] tracking-[0.1em] font-medium text-zinc-400 dark:text-zinc-500" style="">
+            © 2024 MANMEET SINGH. ALL RIGHTS RESERVED.
+        </div>
+</footer>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 bg-[#0c0c0c] text-white z-40 flex flex-col pt-[80px] px-8 transition-transform duration-500 translate-x-full overflow-y-auto pb-8">
+    <div class="flex flex-col w-full mt-4">
+        <a class="py-5 border-b border-white/10 text-[1.35rem] font-black tracking-wide uppercase hover:text-primary transition-colors block" href="../about_nav_linked/code.html">ABOUT</a>
+        <a class="py-5 border-b border-white/10 text-[1.35rem] font-black tracking-wide uppercase hover:text-primary transition-colors block" href="../projects_nav_linked/code.html">PROJECTS</a>
+        <a class="py-5 border-b border-white/10 text-[1.35rem] font-black tracking-wide uppercase hover:text-primary transition-colors block" href="../studio_updated_portrait_alignment/code.html">STUDIO</a>
+        <a class="py-5 border-b border-white/10 text-[1.35rem] font-black tracking-wide uppercase hover:text-primary transition-colors block" href="../strategy_unified_navigation/code.html">STRATEGY</a>
+        <a class="py-5 border-b border-white/10 text-[1.35rem] font-black tracking-wide uppercase hover:text-primary transition-colors block" href="../archives_unified_navigation/code.html">ARCHIVES</a>
+        <a class="py-5 border-b border-white/10 text-[1.35rem] font-black tracking-wide uppercase hover:text-primary transition-colors block" href="../contact_nav_linked/code.html">CONTACT</a>
+    </div>
+
+    <!-- Bottom Buttons Area -->
+    <div class="mt-10 flex flex-col gap-3 w-full max-w-sm">
+        <div class="flex flex-row w-full h-[3.25rem]">
+            <a href="#" class="flex-1 bg-[#f2f2f2] text-black hover:bg-white flex items-center px-4 gap-3 font-bold text-[0.95rem]">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                LinkedIn
+            </a>
+            <a href="../contact_nav_linked/code.html" class="bg-primary hover:bg-blue-700 text-white flex items-center justify-center px-6 font-bold text-[0.95rem] tracking-wide whitespace-nowrap">INQUIRE</a>
+        </div>
+        <div class="flex w-full h-[3.25rem]">
+            <a href="#" class="flex-1 bg-[#f2f2f2] text-black hover:bg-white flex items-center px-4 gap-3 font-bold text-[0.95rem]">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = menuBtn ? menuBtn.querySelector('span') : null;
+
+        if(menuBtn) {
+            menuBtn.addEventListener('click', () => {
+                const isOpen = !mobileMenu.classList.contains('translate-x-full');
+                if (isOpen) {
+                    mobileMenu.classList.add('translate-x-full');
+                    menuIcon.textContent = 'menu';
+                    menuIcon.classList.remove('font-light');
+                    menuIcon.style.fontWeight = "";
+                } else {
+                    mobileMenu.classList.remove('translate-x-full');
+                    menuIcon.textContent = 'close';
+                    menuIcon.style.fontWeight = "200";
+                }
+            });
+
+            // Close menu on link click
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('translate-x-full');
+                    menuIcon.textContent = 'menu';
+                    menuIcon.style.fontWeight = "";
+                });
+            });
+        }
+    });
+</script>
+</body>
+</html>

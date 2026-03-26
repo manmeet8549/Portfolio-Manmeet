@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Studio | MANMEET SINGH</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error": "#9f403d",
+              "tertiary-dim": "#44546a",
+              "surface-dim": "#d3dbdd",
+              "on-error": "#fff7f6",
+              "error-container": "#fe8983",
+              "primary-container": "#dbe1ff",
+              "on-tertiary": "#f7f9ff",
+              "on-secondary-container": "#525252",
+              "primary-fixed-dim": "#c7d3ff",
+              "secondary-dim": "#535353",
+              "on-error-container": "#752121",
+              "surface-container-high": "#e4e9ea",
+              "outline-variant": "#acb3b4",
+              "tertiary-fixed": "#c8d8f3",
+              "on-secondary": "#f9f9f9",
+              "surface-variant": "#dde4e5",
+              "on-primary": "#f8f7ff",
+              "surface-container-low": "#f2f4f4",
+              "secondary-fixed-dim": "#d4d4d4",
+              "on-surface-variant": "#596061",
+              "background": "#f9f9f9",
+              "primary-dim": "#0048c1",
+              "secondary": "#5f5f5f",
+              "inverse-surface": "#0c0f0f",
+              "on-primary-container": "#0048bf",
+              "surface-container": "#ebeeef",
+              "on-tertiary-fixed": "#29394e",
+              "on-tertiary-container": "#3c4c61",
+              "surface": "#f9f9f9",
+              "tertiary-container": "#c8d8f3",
+              "secondary-container": "#e2e2e2",
+              "on-surface": "#2d3435",
+              "primary-fixed": "#dbe1ff",
+              "surface-bright": "#f9f9f9",
+              "error-dim": "#4e0309",
+              "on-tertiary-fixed-variant": "#46556b",
+              "outline": "#757c7d",
+              "on-secondary-fixed-variant": "#5b5b5b",
+              "inverse-on-surface": "#9c9d9d",
+              "secondary-fixed": "#e2e2e2",
+              "tertiary-fixed-dim": "#bacae4",
+              "on-primary-fixed-variant": "#0050d4",
+              "on-secondary-fixed": "#3f3f3f",
+              "inverse-primary": "#618bff",
+              "on-background": "#2d3435",
+              "surface-container-highest": "#dde4e5",
+              "tertiary": "#506076",
+              "surface-tint": "#0053db",
+              "on-primary-fixed": "#003798",
+              "primary": "#0053db",
+              "surface-container-lowest": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Inter", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0", "lg": "0", "xl": "0", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .grid-guide {
+            background-image: linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px);
+            background-size: 8.333333% 100%;
+        }
+        .border-heavy { border: 1px solid #000; }
+        .border-heavy-r { border-right: 1px solid #000; }
+        .border-heavy-b { border-bottom: 1px solid #000; }
+        .hover-invert:hover { background-color: #000 !important; color: #fff !important; }
+        .hover-invert:hover * { color: #fff !important; }
+        .hover-blue:hover { background-color: #2563EB !important; color: #fff !important; }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary selection:text-white">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white">
+<div class="flex items-center w-full px-6 py-4 md:px-8">
+<div class="flex-1">
+<div class="text-xl font-black tracking-tighter uppercase font-mono"><a href="../portfolio_nav_linked/code.html">MANMEET SINGH</a></div>
+</div>
+<div class="hidden md:flex flex-1 justify-center items-center space-x-12 font-mono text-sm uppercase font-bold">
+<a class="hover:text-primary transition-colors" href="../about_nav_linked/code.html">About</a>
+<a class="hover:text-primary transition-colors" href="../projects_nav_linked/code.html">Projects</a>
+<a class="text-primary" href="../studio_updated_portrait_alignment/code.html">Studio</a>
+<a class="hover:text-primary transition-colors" href="../contact_nav_linked/code.html">Contact</a>
+</div>
+<div class="flex flex-1 justify-end items-center space-x-4">
+<a class="hidden md:block border border-black bg-white text-black px-4 py-2 font-mono text-xs font-bold uppercase hover:bg-primary hover:text-white hover:border-primary transition-colors" href="#">
+        Linkedin
+    </a>
+<a class="hidden md:block border border-black bg-white text-black px-4 py-2 font-mono text-xs font-bold uppercase hover:bg-primary hover:text-white hover:border-primary transition-colors" href="#">
+        Github
+    </a>
+<a href="../contact_nav_linked/code.html" class="hidden md:block bg-black text-white px-6 py-2 font-mono text-xs font-bold uppercase hover:bg-primary transition-colors inline-block text-center pt-[10px]">Inquiry →</a>
+<button id="mobile-menu-btn" class="block md:hidden text-black focus:outline-none ml-4 sm:ml-4 relative z-[60] p-2" aria-label="Toggle Menu">
+    <span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-32">
+<!-- Hero Section -->
+<section class="px-8 mb-24 lg:mb-48">
+<h1 class="text-[5rem] md:text-[8rem] lg:text-[12rem] font-extrabold leading-[0.85] tracking-tighter uppercase mb-8">
+                STUDIO
+            </h1>
+<p class="max-w-2xl text-xl md:text-2xl font-medium text-secondary leading-relaxed">
+                Designing and building modern digital experiences with clarity and precision.
+            </p>
+</section>
+<!-- Intro Grid -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-0 border-t border-zinc-200">
+<div class="md:col-span-7 p-8 lg:p-24 border-b md:border-b-0 md:border-r border-zinc-200 flex flex-col justify-center">
+<p class="text-2xl md:text-3xl lg:text-4xl font-light leading-tight">
+                    I partner with ambitious startups and established brands to translate complex ideas into intuitive, high-performance digital products. My approach is rooted in structural integrity and aesthetic minimalism.
+                </p>
+</div>
+<div class="md:col-span-5 aspect-square md:aspect-auto relative overflow-hidden bg-surface-container">
+<img alt="Manmeet Singh portrait" class="absolute inset-0 w-full h-full object-cover grayscale contrast-125" data-alt="Professional grayscale portrait of Manmeet Singh with a turban, centered and high-contrast" src="https://lh3.googleusercontent.com/aida/ADBb0uiU2TIXCSvN5NmBGntGYAxjBH-ndfWqOUBzubdPER3Yoo3y_j6iJ7R-eudb4uV7N6yiZ23CsrrURX6DVPkgMt7vRfSHxdvYqECSsDrzmg7Ijf62_Y1cGEqGj-7qIil3Wm8OneraYdg51099FaIoKfvCFvRRlIUUTwXfRwe1cLVLICY4N3zWS7_16gWi1TmDPYgtXvvURQKWVKxpG7TMv8LJ2U3Yxo0XFQPIfkv467g2QDR5pK5Ps0yBnQTga4Usxb2FMrA01M_582A"/>
+</div>
+</section>
+<!-- Services Section -->
+<section class="bg-surface-container-low border-y border-zinc-200">
+<div class="grid grid-cols-1 md:grid-cols-3">
+<!-- Web Development -->
+<div class="p-12 lg:p-20 border-b md:border-b-0 md:border-r border-zinc-200 group hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-primary text-4xl mb-8">terminal</span>
+<h3 class="text-2xl font-bold uppercase tracking-tight mb-4">Web Development</h3>
+<p class="text-secondary leading-relaxed">High-performance, scalable web applications built with the latest frameworks and a focus on speed, security, and accessibility.</p>
+</div>
+<!-- UI/UX Design -->
+<div class="p-12 lg:p-20 border-b md:border-b-0 md:border-r border-zinc-200 group hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-primary text-4xl mb-8">grid_view</span>
+<h3 class="text-2xl font-bold uppercase tracking-tight mb-4">UI/UX Design</h3>
+<p class="text-secondary leading-relaxed">Creating seamless user journeys through data-driven research and pixel-perfect interface design that commands attention.</p>
+</div>
+<!-- AI Projects -->
+<div class="p-12 lg:p-20 group hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-primary text-4xl mb-8">memory</span>
+<h3 class="text-2xl font-bold uppercase tracking-tight mb-4">AI Projects</h3>
+<p class="text-secondary leading-relaxed">Integrating artificial intelligence into user workflows to automate tasks and provide intelligent, personalized experiences.</p>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="px-8 py-24 lg:py-48 overflow-hidden">
+<h2 class="text-sm font-bold tracking-[0.2em] uppercase text-primary mb-16">The Methodology</h2>
+<div class="flex flex-col md:flex-row gap-0 border-t border-zinc-200">
+<div class="flex-1 p-8 border-b md:border-b-0 md:border-r border-zinc-200">
+<div class="text-4xl font-black mb-6">01</div>
+<h4 class="font-bold uppercase mb-2">Discovery</h4>
+<p class="text-sm text-secondary">Defining goals, audience research, and technical feasibility.</p>
+</div>
+<div class="flex-1 p-8 border-b md:border-b-0 md:border-r border-zinc-200">
+<div class="text-4xl font-black mb-6">02</div>
+<h4 class="font-bold uppercase mb-2">Planning</h4>
+<p class="text-sm text-secondary">Sitemap creation, wireframing, and strategic roadmapping.</p>
+</div>
+<div class="flex-1 p-8 border-b md:border-b-0 md:border-r border-zinc-200">
+<div class="text-4xl font-black mb-6">03</div>
+<h4 class="font-bold uppercase mb-2">Design</h4>
+<p class="text-sm text-secondary">Visual language, UI components, and high-fidelity prototyping.</p>
+</div>
+<div class="flex-1 p-8 border-b md:border-b-0 md:border-r border-zinc-200">
+<div class="text-4xl font-black mb-6">04</div>
+<h4 class="font-bold uppercase mb-2">Development</h4>
+<p class="text-sm text-secondary">Clean coding, integration, and performance optimization.</p>
+</div>
+<div class="flex-1 p-8">
+<div class="text-4xl font-black mb-6">05</div>
+<h4 class="font-bold uppercase mb-2">Delivery</h4>
+<p class="text-sm text-secondary">Testing, deployment, and post-launch maintenance.</p>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="grid grid-cols-1 md:grid-cols-3 border-t border-zinc-200 bg-zinc-900 text-white">
+<div class="p-16 border-b md:border-b-0 md:border-r border-zinc-800 flex flex-col justify-center items-center text-center">
+<div class="text-6xl font-black mb-2">10+</div>
+<div class="text-sm tracking-widest uppercase font-bold text-zinc-500">Projects</div>
+</div>
+<div class="p-16 bg-primary flex flex-col justify-center items-center text-center">
+<div class="text-6xl font-black mb-2">2+</div>
+<div class="text-sm tracking-widest uppercase font-bold text-white/70">Years Experience</div>
+</div>
+<div class="p-16 border-t md:border-t-0 md:border-l border-zinc-800 flex flex-col justify-center items-center text-center">
+<div class="text-6xl font-black mb-2">FAST</div>
+<div class="text-sm tracking-widest uppercase font-bold text-zinc-500">Delivery</div>
+</div>
+</section>
+<!-- Philosophy -->
+<section class="py-32 lg:py-64 px-8 flex justify-center items-center bg-surface-container-highest">
+<div class="max-w-5xl text-center">
+<h2 class="text-4xl md:text-6xl lg:text-8xl font-black leading-[1.1] tracking-tighter uppercase italic">
+                    Clarity over complexity. <br/>
+<span class="text-primary not-italic">Design that performs.</span>
+</h2>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="bg-white p-8 md:p-24 lg:p-48 text-center">
+<h2 class="text-5xl md:text-7xl lg:text-9xl font-extrabold tracking-tighter uppercase mb-12">
+                LET’S START A <br/> PROJECT
+            </h2>
+<button class="bg-primary text-white px-12 py-6 text-xl font-bold uppercase tracking-widest hover:bg-primary-dim transition-all active:scale-95">
+                Inquire
+            </button>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-24 px-8 flex flex-col md:flex-row justify-between items-end border-t border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950">
+<div class="flex flex-col gap-8">
+<div class="font-bold text-zinc-900 dark:text-zinc-100 text-2xl tracking-tighter uppercase">
+                MANMEET SINGH
+            </div>
+<div class="font-['Inter'] text-[0.75rem] tracking-[0.05em] uppercase text-zinc-400 dark:text-zinc-600">
+                © 2024 MANMEET SINGH. ALL RIGHTS RESERVED.
+            </div>
+</div>
+<div class="flex gap-8 mt-12 md:mt-0">
+<a class="font-['Inter'] text-[0.75rem] tracking-[0.05em] uppercase text-zinc-400 dark:text-zinc-600 hover:text-[#0053db] transition-colors opacity-80 hover:opacity-100" href="#">INSTAGRAM</a>
+<a class="font-['Inter'] text-[0.75rem] tracking-[0.05em] uppercase text-zinc-400 dark:text-zinc-600 hover:text-[#0053db] transition-colors opacity-80 hover:opacity-100" href="#">TWITTER</a>
+<a class="font-['Inter'] text-[0.75rem] tracking-[0.05em] uppercase text-zinc-400 dark:text-zinc-600 hover:text-[#0053db] transition-colors opacity-80 hover:opacity-100" href="#">LINKEDIN</a>
+<a class="font-['Inter'] text-[0.75rem] tracking-[0.05em] uppercase text-zinc-400 dark:text-zinc-600 hover:text-[#0053db] transition-colors opacity-80 hover:opacity-100" href="#">GITHUB</a>
+</div>
+</footer>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 bg-[#0c0c0c] text-white z-40 flex flex-col pt-[80px] px-8 transition-transform duration-500 translate-x-full overflow-y-auto pb-8">
+    <div class="flex flex-col w-full mt-4">
+        <a class="py-5 border-b border-white/10 text-[1.35rem] font-black tracking-wide uppercase hover:text-primary transition-colors block" href="../about_nav_linked/code.html">ABOUT</a>
+        <a class="py-5 border-b border-white/10 text-[1.35rem] font-black tracking-wide uppercase hover:text-primary transition-colors block" href="../projects_nav_linked/code.html">PROJECTS</a>
+        <a class="py-5 border-b border-white/10 text-[1.35rem] font-black tracking-wide uppercase hover:text-primary transition-colors block" href="../studio_updated_portrait_alignment/code.html">STUDIO</a>
+        <a class="py-5 border-b border-white/10 text-[1.35rem] font-black tracking-wide uppercase hover:text-primary transition-colors block" href="../strategy_unified_navigation/code.html">STRATEGY</a>
+        <a class="py-5 border-b border-white/10 text-[1.35rem] font-black tracking-wide uppercase hover:text-primary transition-colors block" href="../archives_unified_navigation/code.html">ARCHIVES</a>
+        <a class="py-5 border-b border-white/10 text-[1.35rem] font-black tracking-wide uppercase hover:text-primary transition-colors block" href="../contact_nav_linked/code.html">CONTACT</a>
+    </div>
+
+    <!-- Bottom Buttons Area -->
+    <div class="mt-10 flex flex-col gap-3 w-full max-w-sm">
+        <div class="flex flex-row w-full h-[3.25rem]">
+            <a href="#" class="flex-1 bg-[#f2f2f2] text-black hover:bg-white flex items-center px-4 gap-3 font-bold text-[0.95rem]">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                LinkedIn
+            </a>
+            <a href="../contact_nav_linked/code.html" class="bg-primary hover:bg-blue-700 text-white flex items-center justify-center px-6 font-bold text-[0.95rem] tracking-wide whitespace-nowrap">INQUIRE</a>
+        </div>
+        <div class="flex w-full h-[3.25rem]">
+            <a href="#" class="flex-1 bg-[#f2f2f2] text-black hover:bg-white flex items-center px-4 gap-3 font-bold text-[0.95rem]">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = menuBtn ? menuBtn.querySelector('span') : null;
+
+        if(menuBtn) {
+            menuBtn.addEventListener('click', () => {
+                const isOpen = !mobileMenu.classList.contains('translate-x-full');
+                if (isOpen) {
+                    mobileMenu.classList.add('translate-x-full');
+                    menuIcon.textContent = 'menu';
+                    menuIcon.classList.remove('font-light');
+                    menuIcon.style.fontWeight = "";
+                } else {
+                    mobileMenu.classList.remove('translate-x-full');
+                    menuIcon.textContent = 'close';
+                    menuIcon.style.fontWeight = "200";
+                }
+            });
+
+            // Close menu on link click
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('translate-x-full');
+                    menuIcon.textContent = 'menu';
+                    menuIcon.style.fontWeight = "";
+                });
+            });
+        }
+    });
+</script>
+</body>
+</html>

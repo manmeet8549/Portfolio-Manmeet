@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Case Study | MANMEET SINGH</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error-dim": "#4e0309",
+              "error-container": "#fe8983",
+              "background": "#f9f9f9",
+              "tertiary-dim": "#44546a",
+              "on-secondary-container": "#525252",
+              "on-surface": "#2d3435",
+              "surface": "#f9f9f9",
+              "on-error-container": "#752121",
+              "tertiary": "#506076",
+              "surface-container-low": "#f2f4f4",
+              "secondary-fixed-dim": "#d4d4d4",
+              "on-primary-fixed": "#003798",
+              "on-error": "#fff7f6",
+              "error": "#9f403d",
+              "surface-bright": "#f9f9f9",
+              "on-secondary": "#f9f9f9",
+              "surface-variant": "#dde4e5",
+              "secondary": "#5f5f5f",
+              "on-secondary-fixed-variant": "#5b5b5b",
+              "tertiary-fixed": "#c8d8f3",
+              "on-primary-fixed-variant": "#0050d4",
+              "surface-container-high": "#e4e9ea",
+              "on-primary-container": "#0048bf",
+              "outline-variant": "#acb3b4",
+              "tertiary-container": "#c8d8f3",
+              "surface-container-highest": "#dde4e5",
+              "on-tertiary-fixed-variant": "#46556b",
+              "primary-container": "#dbe1ff",
+              "on-surface-variant": "#596061",
+              "primary-fixed": "#dbe1ff",
+              "primary-fixed-dim": "#c7d3ff",
+              "secondary-fixed": "#e2e2e2",
+              "inverse-surface": "#0c0f0f",
+              "surface-container": "#ebeeef",
+              "on-tertiary-container": "#3c4c61",
+              "secondary-container": "#e2e2e2",
+              "on-secondary-fixed": "#3f3f3f",
+              "surface-dim": "#d3dbdd",
+              "secondary-dim": "#535353",
+              "inverse-on-surface": "#9c9d9d",
+              "on-background": "#2d3435",
+              "primary": "#0053db",
+              "on-tertiary-fixed": "#29394e",
+              "tertiary-fixed-dim": "#bacae4",
+              "on-primary": "#f8f7ff",
+              "surface-container-lowest": "#ffffff",
+              "outline": "#757c7d",
+              "on-tertiary": "#f7f9ff",
+              "primary-dim": "#0048c1",
+              "inverse-primary": "#618bff",
+              "surface-tint": "#0053db"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    
+        .border-heavy-b { border-bottom: 1px solid #000; }
+        .font-mono { font-family: 'Space Mono', monospace; }
+    </style>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/></head>
+<body class="bg-background text-on-surface selection:bg-primary selection:text-white">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white border-heavy-b">
+<div class="flex items-center w-full px-6 py-4 md:px-8">
+<div class="flex-1">
+<div class="text-xl font-black tracking-tighter uppercase font-mono"><a href="../portfolio_nav_linked/code.html">MANMEET SINGH</a></div>
+</div>
+<div class="hidden md:flex flex-1 justify-center items-center space-x-12 font-mono text-sm uppercase font-bold">
+<a class="hover:text-primary transition-colors" href="../about_nav_linked/code.html">About</a>
+<a class="text-primary" href="../projects_nav_linked/code.html">Projects</a>
+<a class="hover:text-primary transition-colors" href="../studio_updated_portrait_alignment/code.html">Studio</a>
+<a class="hover:text-primary transition-colors" href="../contact_nav_linked/code.html">Contact</a>
+</div>
+<div class="flex flex-1 justify-end items-center space-x-4">
+<a class="hidden md:block border border-black bg-white text-black px-4 py-2 font-mono text-xs font-bold uppercase hover:bg-primary hover:text-white hover:border-primary transition-colors" href="#">
+        Linkedin
+    </a>
+<a class="hidden md:block border border-black bg-white text-black px-4 py-2 font-mono text-xs font-bold uppercase hover:bg-primary hover:text-white hover:border-primary transition-colors" href="#">
+        Github
+    </a>
+<a href="../contact_nav_linked/code.html" class="hidden md:block bg-black text-white px-6 py-2 font-mono text-xs font-bold uppercase hover:bg-primary transition-colors inline-block text-center pt-[10px]">Inquiry →</a>
+<button id="mobile-menu-btn" class="block md:hidden text-black focus:outline-none ml-4 sm:ml-4 relative z-[60] p-2" aria-label="Toggle Menu">
+    <span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pb-24 pt-[61px]">
+<!-- HEADER SECTION -->
+<header class="max-w-[1440px] mx-auto px-8 md:px-12 mb-16">
+<div class="flex flex-col gap-4">
+<span class="text-primary font-bold tracking-[0.2em] text-xs uppercase">01 / CASE STUDY</span>
+<h1 class="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.85] text-black uppercase">
+                    VISUAL<br/>LANGUAGE
+                </h1>
+</div>
+</header>
+<!-- INTRO SECTION -->
+<section class="max-w-[1440px] mx-auto px-8 md:px-12 mb-24 grid grid-cols-12">
+<div class="col-span-12 md:col-span-5">
+<p class="text-xl md:text-2xl font-medium leading-relaxed text-on-surface-variant">
+                    Focusing on high-contrast visual systems and brutalist architecture for the web. A exploration into how structural rigidity can coexist with digital fluidity.
+                </p>
+</div>
+</section>
+<!-- HERO VISUAL BLOCK -->
+<section class="w-full mb-32 bg-surface-container-highest overflow-hidden">
+<div class="max-w-[1440px] mx-auto">
+<img alt="User Portrait" class="w-full h-[614px] md:h-[819px] object-cover filter grayscale contrast-125 hover:grayscale-0 transition-all duration-700 ease-in-out" data-alt="Minimalist architectural structure with sharp shadows and high contrast light, brutalist concrete textures and a singular electric blue light element." src="https://lh3.googleusercontent.com/aida/ADBb0ujqQ5rUUL7uRHmndbX80jo_VebCffe3Gf4aTaipPBV44qaUjLAo4Ks-WvaWd2vOcNFMi8dDMM86se99n5TPnxYMNeHhXcc7WaWlmADe-PJLw09kgmJyqbqudy47-l7IVudvsC0RmhzPmbahIIvrNszKlSAYtFFE3lYPpXdfjjt2PEnpubqALVeQHN9HOWRK1EyX2MiXZeLS4Dn54avbHsrmlvjTW6xHPyEGBDTjo32kkB2n97pbO9gQlkXu7BRis739t7YXM8WZrA"/>
+</div>
+</section>
+<!-- PROJECT DETAILS GRID -->
+<section class="max-w-[1440px] mx-auto px-8 md:px-12 mb-32">
+<div class="grid grid-cols-2 md:grid-cols-4 border-t border-outline-variant/20 pt-12 gap-12">
+<div class="flex flex-col gap-2">
+<span class="text-[0.65rem] font-black tracking-[0.2em] uppercase text-primary">ROLE</span>
+<span class="text-lg font-bold text-black uppercase">Lead Designer</span>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-[0.65rem] font-black tracking-[0.2em] uppercase text-primary">TOOLS USED</span>
+<span class="text-lg font-bold text-black uppercase">Figma, Webflow</span>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-[0.65rem] font-black tracking-[0.2em] uppercase text-primary">TIMELINE</span>
+<span class="text-lg font-bold text-black uppercase">12 WEEKS</span>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-[0.65rem] font-black tracking-[0.2em] uppercase text-primary">CLIENT</span>
+<span class="text-lg font-bold text-black uppercase">AXON STUDIO</span>
+</div>
+</div>
+</section>
+<!-- CONTENT SECTIONS (Bento Style) -->
+<section class="max-w-[1440px] mx-auto px-8 md:px-12 mb-32">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-24">
+<!-- Problem -->
+<div class="md:col-span-4 bg-surface-container-low p-12 flex flex-col justify-between aspect-square md:aspect-auto min-h-[400px]">
+<h2 class="text-4xl font-black tracking-tighter uppercase leading-none">THE<br/>PROBLEM</h2>
+<p class="text-sm leading-relaxed text-on-surface-variant font-medium">
+                        Conventional digital interfaces had become soft and predictable. The brand needed to break away from rounded "friendly" aesthetics to command authority in the architectural space.
+                    </p>
+</div>
+<!-- Approach -->
+<div class="md:col-span-8 bg-black text-white p-12 flex flex-col justify-between min-h-[400px]">
+<h2 class="text-4xl font-black tracking-tighter uppercase leading-none">THE<br/>APPROACH</h2>
+<div class="grid md:grid-cols-2 gap-8">
+<p class="text-sm leading-relaxed text-gray-400 font-medium">
+                            We implemented a strict 12-column grid system inspired by Swiss typography. Every element was stripped to its core essence—eliminating shadows, radii, and unnecessary ornamentation.
+                        </p>
+<p class="text-sm leading-relaxed text-gray-400 font-medium">
+                            Color was used as a functional tool rather than decoration. The electric blue serves as the singular beacon for user interaction points.
+                        </p>
+</div>
+</div>
+<!-- Solution Block (Full Width Image + Text) -->
+<div class="md:col-span-12 grid md:grid-cols-2 gap-12 items-center">
+<img alt="Solution Visual" class="w-full aspect-video object-cover filter grayscale" data-alt="Abstract geometric shapes in black and white with sharp light angles, high-end editorial graphic design style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCI94eOMloOtCX6jrFeZQBKOrtN6BglP1Vfe0vJPSYVHfb2vgPbZfpk6vw0SG2gY5GASCahL1JvK174Vmu_gTCJ-sUB6oVXnjIssitisur0kijBDWAN8Lr0fe79-rpDSBt_igWur2aKJFG0I9s6pg83qQvhvdsAfMG_A-tjIOMJLKsfTDeOrxk9upLsEtLO2FNVcLpC8Wqxw9aETlokicnD71TQKT4l8FE4AcwpdJdSTmGvCPlG3aHKaWI84q7qmd1hiv1TJApm0yy1"/>
+<div class="flex flex-col gap-8">
+<h2 class="text-5xl font-black tracking-tighter uppercase leading-none text-primary">THE<br/>SOLUTION</h2>
+<p class="text-lg leading-relaxed text-on-surface-variant">
+                            A monolith digital experience that feels as permanent as concrete. The resulting system saw a 40% increase in user engagement due to the clarity and hierarchy of information.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- NEXT NAVIGATION -->
+<section class="w-full border-t border-outline-variant/20 pt-24 pb-12">
+<div class="max-w-[1440px] mx-auto px-8 md:px-12 flex flex-col items-center">
+<span class="text-xs font-black tracking-[0.3em] uppercase mb-4 opacity-50">UP NEXT</span>
+<a class="group flex items-center gap-6" href="#">
+<span class="text-5xl md:text-8xl font-black tracking-tighter uppercase text-black group-hover:text-primary transition-colors duration-300">NEON ARCHIVE</span>
+<span class="material-symbols-outlined text-5xl md:text-7xl text-primary group-hover:translate-x-4 transition-transform duration-300">arrow_forward</span>
+</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-0 bg-black dark:bg-[#f9f9f9]">
+<div class="flex flex-col md:flex-row justify-between items-end px-12 py-24 w-full max-w-[1440px] mx-auto">
+<div class="flex flex-col gap-12 w-full md:w-auto mb-12 md:mb-0">
+<span class="text-4xl font-black text-white dark:text-black tracking-tighter uppercase">MANMEET SINGH</span>
+<p class="font-['Inter'] font-medium tracking-[0.05em] uppercase text-[0.75rem] text-gray-400 dark:text-gray-600 max-w-xs">
+                    Building digital monuments through code and uncompromising design systems.
+                </p>
+</div>
+<div class="flex flex-col items-end gap-12 w-full md:w-auto">
+<div class="flex gap-8">
+<a class="font-['Inter'] font-medium tracking-[0.05em] uppercase text-[0.75rem] text-gray-400 dark:text-gray-600 hover:text-[#0053db] underline decoration-2 underline-offset-4 transition-all" href="#">INSTAGRAM</a>
+<a class="font-['Inter'] font-medium tracking-[0.05em] uppercase text-[0.75rem] text-gray-400 dark:text-gray-600 hover:text-[#0053db] underline decoration-2 underline-offset-4 transition-all" href="#">BEHANCE</a>
+<a class="font-['Inter'] font-medium tracking-[0.05em] uppercase text-[0.75rem] text-gray-400 dark:text-gray-600 hover:text-[#0053db] underline decoration-2 underline-offset-4 transition-all" href="#">TWITTER</a>
+</div>
+<span class="font-['Inter'] font-medium tracking-[0.05em] uppercase text-[0.75rem] text-gray-400 dark:text-gray-600">
+                    © 2024 MANMEET SINGH. ALL RIGHTS RESERVED.
+                </span>
+</div>
+</div>
+</footer>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 bg-[#0c0c0c] text-white z-40 flex flex-col pt-[80px] px-8 transition-transform duration-500 translate-x-full overflow-y-auto pb-8">
+    <div class="flex flex-col w-full mt-4">
+        <a class="py-5 border-b border-white/10 text-[1.35rem] font-black tracking-wide uppercase hover:text-primary transition-colors block" href="../about_nav_linked/code.html">ABOUT</a>
+        <a class="py-5 border-b border-white/10 text-[1.35rem] font-black tracking-wide uppercase hover:text-primary transition-colors block" href="../projects_nav_linked/code.html">PROJECTS</a>
+        <a class="py-5 border-b border-white/10 text-[1.35rem] font-black tracking-wide uppercase hover:text-primary transition-colors block" href="../studio_updated_portrait_alignment/code.html">STUDIO</a>
+        <a class="py-5 border-b border-white/10 text-[1.35rem] font-black tracking-wide uppercase hover:text-primary transition-colors block" href="../strategy_unified_navigation/code.html">STRATEGY</a>
+        <a class="py-5 border-b border-white/10 text-[1.35rem] font-black tracking-wide uppercase hover:text-primary transition-colors block" href="../archives_unified_navigation/code.html">ARCHIVES</a>
+        <a class="py-5 border-b border-white/10 text-[1.35rem] font-black tracking-wide uppercase hover:text-primary transition-colors block" href="../contact_nav_linked/code.html">CONTACT</a>
+    </div>
+
+    <!-- Bottom Buttons Area -->
+    <div class="mt-10 flex flex-col gap-3 w-full max-w-sm">
+        <div class="flex flex-row w-full h-[3.25rem]">
+            <a href="#" class="flex-1 bg-[#f2f2f2] text-black hover:bg-white flex items-center px-4 gap-3 font-bold text-[0.95rem]">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                LinkedIn
+            </a>
+            <a href="../contact_nav_linked/code.html" class="bg-primary hover:bg-blue-700 text-white flex items-center justify-center px-6 font-bold text-[0.95rem] tracking-wide whitespace-nowrap">INQUIRE</a>
+        </div>
+        <div class="flex w-full h-[3.25rem]">
+            <a href="#" class="flex-1 bg-[#f2f2f2] text-black hover:bg-white flex items-center px-4 gap-3 font-bold text-[0.95rem]">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = menuBtn ? menuBtn.querySelector('span') : null;
+
+        if(menuBtn) {
+            menuBtn.addEventListener('click', () => {
+                const isOpen = !mobileMenu.classList.contains('translate-x-full');
+                if (isOpen) {
+                    mobileMenu.classList.add('translate-x-full');
+                    menuIcon.textContent = 'menu';
+                    menuIcon.classList.remove('font-light');
+                    menuIcon.style.fontWeight = "";
+                } else {
+                    mobileMenu.classList.remove('translate-x-full');
+                    menuIcon.textContent = 'close';
+                    menuIcon.style.fontWeight = "200";
+                }
+            });
+
+            // Close menu on link click
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('translate-x-full');
+                    menuIcon.textContent = 'menu';
+                    menuIcon.style.fontWeight = "";
+                });
+            });
+        }
+    });
+</script>
+</body>
+</html>

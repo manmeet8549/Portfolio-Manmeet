@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PROJECTS | MONOLITH ARCHIVE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#5b5b5b",
+              "surface-container": "#ebeeef",
+              "tertiary-fixed-dim": "#bacae4",
+              "tertiary-dim": "#44546a",
+              "tertiary": "#506076",
+              "on-secondary-container": "#525252",
+              "on-error": "#fff7f6",
+              "primary-fixed": "#dbe1ff",
+              "on-secondary-fixed": "#3f3f3f",
+              "on-primary": "#f8f7ff",
+              "inverse-surface": "#0c0f0f",
+              "primary-dim": "#0048c1",
+              "on-surface": "#2d3435",
+              "on-tertiary": "#f7f9ff",
+              "on-primary-container": "#0048bf",
+              "surface-container-highest": "#dde4e5",
+              "on-tertiary-fixed": "#29394e",
+              "outline-variant": "#acb3b4",
+              "on-background": "#2d3435",
+              "tertiary-container": "#c8d8f3",
+              "error-container": "#fe8983",
+              "surface": "#f9f9f9",
+              "surface-variant": "#dde4e5",
+              "surface-tint": "#0053db",
+              "secondary-fixed-dim": "#d4d4d4",
+              "primary-container": "#dbe1ff",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-container": "#3c4c61",
+              "on-error-container": "#752121",
+              "inverse-on-surface": "#9c9d9d",
+              "secondary": "#5f5f5f",
+              "primary": "#0053db",
+              "background": "#f9f9f9",
+              "secondary-dim": "#535353",
+              "on-primary-fixed-variant": "#0050d4",
+              "on-surface-variant": "#596061",
+              "on-tertiary-fixed-variant": "#46556b",
+              "tertiary-fixed": "#c8d8f3",
+              "error": "#9f403d",
+              "secondary-container": "#e2e2e2",
+              "surface-bright": "#f9f9f9",
+              "inverse-primary": "#618bff",
+              "secondary-fixed": "#e2e2e2",
+              "surface-container-low": "#f2f4f4",
+              "on-secondary": "#f9f9f9",
+              "surface-container-high": "#e4e9ea",
+              "primary-fixed-dim": "#c7d3ff",
+              "outline": "#757c7d",
+              "surface-dim": "#d3dbdd",
+              "on-primary-fixed": "#003798",
+              "error-dim": "#4e0309"
+            },
+            fontFamily: {
+              "headline": ["Inter", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0", "lg": "0", "xl": "0", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .text-monolith {
+            letter-spacing: -0.04em;
+        }
+        .grid-line-v {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: rgba(0, 83, 219, 0.05);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- Grid Visual Aids (Brutalist Decorative) -->
+<div class="grid-line-v left-[8.33%]"></div>
+<div class="grid-line-v left-[50%]"></div>
+<div class="grid-line-v left-[91.66%]"></div>
+<!-- Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-white border-heavy-b">
+<div class="flex items-center w-full px-6 py-4 md:px-8">
+<div class="flex-1">
+<div class="text-xl font-black tracking-tighter uppercase font-mono" style=""><a class="hover:text-primary transition-colors" href="../portfolio_nav_linked/code.html">MANMEET SINGH</a></div>
+</div>
+<div class="hidden md:flex flex-1 justify-center items-center space-x-12 font-mono text-sm uppercase font-bold">
+<a class="hover:text-primary transition-colors" href="../about_nav_linked/code.html" style="">About</a>
+<a class="text-primary" href="../projects_nav_linked/code.html" style="">Projects</a>
+<a class="hover:text-primary transition-colors" href="../studio_updated_portrait_alignment/code.html" style="">Studio</a>
+<a class="hover:text-primary transition-colors" href="../contact_nav_linked/code.html" style="">Contact</a>
+</div>
+<div class="flex flex-1 justify-end items-center space-x-4">
+<a class="hidden md:block border border-black bg-white text-black px-4 py-2 font-mono text-xs font-bold uppercase hover:bg-primary hover:text-white hover:border-primary transition-colors" href="#" style="">
+        Linkedin
+    </a>
+<a class="hidden md:block border border-black bg-white text-black px-4 py-2 font-mono text-xs font-bold uppercase hover:bg-primary hover:text-white hover:border-primary transition-colors" href="#" style="">
+        Github
+    </a>
+<a href="../contact_nav_linked/code.html" class="hidden md:block bg-black text-white px-6 py-2 font-mono text-xs font-bold uppercase hover:bg-primary transition-colors inline-block text-center pt-[10px]">Inquiry →</a>
+<button id="mobile-menu-btn" class="block md:hidden text-black focus:outline-none ml-4 sm:ml-4 relative z-[60] p-2" aria-label="Toggle Menu">
+    <span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-40 pb-24 px-12 max-w-[1440px] mx-auto">
+<!-- Header Section -->
+<header class="mb-32">
+<h1 class="text-[clamp(4rem,12vw,10rem)] leading-[0.85] font-extrabold text-monolith uppercase mb-6" style="">
+                PROJECTS
+            </h1>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+<p class="font-['Inter'] uppercase tracking-[0.2em] text-sm font-light opacity-60" style="">
+                    SELECTED WORKS 2022—2024
+                </p>
+<!-- Filter Section -->
+<div class="flex gap-10 font-['Inter'] text-[0.75rem] font-bold tracking-[0.1em] uppercase">
+<button class="text-primary border-b-2 border-primary pb-1" style="">ALL</button>
+<button class="text-on-surface opacity-40 hover:opacity-100 transition-opacity" style="">WEB</button>
+<button class="text-on-surface opacity-40 hover:opacity-100 transition-opacity" style="">AI</button>
+<button class="text-on-surface opacity-40 hover:opacity-100 transition-opacity" style="">DESIGN</button>
+</div>
+</div>
+</header>
+<!-- Featured Project (Horizontal Split) -->
+<section class="mb-40 group cursor-pointer">
+<div class="flex flex-col md:flex-row bg-surface-container-low overflow-hidden">
+<div class="w-full md:w-3/5 aspect-video md:aspect-auto overflow-hidden relative">
+<img alt="Neural Archive" class="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-700" data-alt="Monochromatic abstract 3D geometric structure with sharp glass reflections and deep shadows, minimalist futuristic aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfeOtc42f9SI3cbC_dWPfNDbijrHBd_ttt7fgmLV0Rjs3YZq0XqsgBCsb2mAhFy6Mkc9wLACRl3vhxJxyMkiTTW0JE_HJ-qOYP5vz1F_hi9M9zlVi7ZoY1QMgsEDtQKGEZ8Rbrf-WvZoMsvjDf_W0nUOHm6sDxKxlr2vLguF-a3PhtVkCVvXrhzJil4PWxYMUJqtWhHGM1p69-zDqfwUe4yN1_-F0ti_v2-rX87WNwAyC2NJFHrgIalBo0zRIKCyLHutbOC6J7SvoU" style=""/>
+<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-500"></div>
+</div>
+<div class="w-full md:w-2/5 p-12 md:p-20 flex flex-col justify-center bg-surface-container-lowest">
+<span class="font-['Inter'] uppercase tracking-[0.2em] text-[0.65rem] text-primary mb-4 block font-bold" style="">Featured AI Case Study</span>
+<h2 class="text-5xl md:text-6xl font-extrabold text-monolith uppercase mb-6 leading-tight" style="">NEURAL ARCHIVE</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-12 font-light" style="">
+                        An AI-driven archival system for digital artifacts, leveraging neural networks to categorize and visualize complex metadata through spatial computing.
+                    </p>
+<button class="flex items-center gap-4 text-primary font-bold uppercase tracking-[0.1em] text-xs group/btn" style="">
+                        VIEW CASE STUDY
+                        <span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-2" style="">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Project Grid (Asymmetric) -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+<!-- Block 1: Vertical -->
+<div class="md:col-span-5 flex flex-col group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container relative mb-8">
+<img alt="Kinetic Portfolio" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110" data-alt="Minimalist architectural stairs in black and white with high contrast shadows and sharp lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAPth48vNgUrcGv36Qbz_8P12lG5Haz5E5k83PsgGEJkut7NLudx-_Zwr23mCOKBNJJd7qkv1OCGucunhmm7QlCk6JdwtsutLWGIwqNEkrjsfZohn2u91idcTtISf6QBHHKkEPZQhfN8pzMZF9iQEKqX5AlBXeNg3rRCjxVkVpFNQv0zHM09to124QAsQcKbCpZoYLjEIgPtetjouqd_EdZEi3gDF6xGfMVM8chH5sdhY4euwEkmuJbhSbEIvgKYDi_fQKoB4DmT0U" style=""/>
+<div class="absolute inset-0 bg-primary flex items-center justify-center opacity-0 group-hover:opacity-90 transition-opacity duration-300">
+<span class="text-white font-bold uppercase tracking-[0.2em] text-sm" style="">VIEW PROJECT</span>
+</div>
+</div>
+<div class="px-2">
+<h3 class="text-2xl font-bold uppercase tracking-tight mb-2" style="">KINETIC PORTFOLIO</h3>
+<p class="text-sm text-on-surface-variant uppercase tracking-widest font-medium opacity-60" style="">Creative Development</p>
+</div>
+</div>
+<!-- Block 2: Square & Block 3: Horizontal Container -->
+<div class="md:col-span-7 flex flex-col gap-12">
+<!-- Block 2: Squareish -->
+<div class="group cursor-pointer">
+<div class="aspect-square md:aspect-[16/10] overflow-hidden bg-surface-container relative mb-8">
+<img alt="Oblivion OS" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110" data-alt="Close up of vintage tech components and circuitry in high contrast monochrome lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpL2H8MMX5WoXgEGaFJKxf5T2P5cxS5AZQ412agoWArYGsYYWFXeo8llO9yFrMlRLgnPvqpjxqqGgZ5UT8pTq78VHGxqCyGQqcFhDGUINaJPoDwKLI_7kGJPn6rbAo34mEBUf0Rmj_mLSiDGAdIpD-V8_aAVg7XFuMZ9xuhs6gqLr8xhmTv0Mp3b0sZyOnh8ubIW5mVXiDP9fBb9PusUOi6pWs6DE-BQClLILwtNI-eqZyR25Y-pYP2Z1tQNQxPBLm-hNH1ovaA7_G" style=""/>
+<div class="absolute inset-0 bg-primary flex items-center justify-center opacity-0 group-hover:opacity-90 transition-opacity duration-300">
+<span class="text-white font-bold uppercase tracking-[0.2em] text-sm" style="">VIEW PROJECT</span>
+</div>
+</div>
+<div class="px-2">
+<h3 class="text-2xl font-bold uppercase tracking-tight mb-2" style="">OBLIVION OS</h3>
+<p class="text-sm text-on-surface-variant uppercase tracking-widest font-medium opacity-60" style="">UI/UX Interface Design</p>
+</div>
+</div>
+<!-- Block 3: Horizontal -->
+<div class="group cursor-pointer">
+<div class="aspect-[16/7] overflow-hidden bg-surface-container relative mb-8">
+<img alt="Synthetic Dimensions" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-105" data-alt="Abstract global connectivity network nodes glowing against a dark digital background with soft bokeh" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL3Jyvxya521yQs9RyL51p7iyTMxVtbpSPlFDG-ujuTxBKnEtvUnD3DWrauDRgtVqp4ptcfIM7J9MbcNIlgkLAa3othOhfvAMYNHOPBVOK0mSS8UrfwqAK_basdgl9CF_1-JL2eRBkocloQartDMzJsntziYRoE77wOOKMVUUSZ1QSxywEdun7FVAThpd0Byqcjutdfzf7568NtRvl9QNTjUzHwqSRvAXEfgzEzicMy2gJcuN8zAfPZRRClZw7wbXmFawy5dHXnaQy" style=""/>
+<div class="absolute inset-0 bg-primary flex items-center justify-center opacity-0 group-hover:opacity-90 transition-opacity duration-300">
+<span class="text-white font-bold uppercase tracking-[0.2em] text-sm" style="">VIEW PROJECT</span>
+</div>
+</div>
+<div class="px-2">
+<h3 class="text-2xl font-bold uppercase tracking-tight mb-2" style="">SYNTHETIC DIMENSIONS</h3>
+<p class="text-sm text-on-surface-variant uppercase tracking-widest font-medium opacity-60" style="">Visual Art Direction</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Contact CTA (Brutalist Style) -->
+<section class="mt-60 border-t border-primary/10 pt-32">
+<div class="max-w-4xl">
+<span class="font-['Inter'] uppercase tracking-[0.2em] text-[0.75rem] text-primary mb-8 block font-bold" style="">Get In Touch</span>
+<h2 class="text-[clamp(2.5rem,6vw,5rem)] font-extrabold text-monolith uppercase leading-[0.9] mb-12" style="">
+                    START A CONVERSATION ABOUT YOUR NEXT PROJECT.
+                </h2>
+<a class="inline-block text-2xl font-bold uppercase tracking-tight border-b-4 border-primary pb-2 hover:text-primary transition-colors" href="#" style="">
+                    HELLO@MONOLITH.ARCHIVE
+                </a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f9f9f9] dark:bg-[#2d3435] w-full rounded-0 border-0 flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8 border-t border-[#0053db]/10">
+<div class="text-lg font-bold text-[#2d3435] dark:text-[#f9f9f9]" style="">MANMEET SINGH</div>
+<div class="font-['Inter'] uppercase tracking-[0.05em] text-[0.75rem] font-light text-[#2d3435] dark:text-[#f9f9f9] opacity-50" style="">
+            © 2024 MANMEET SINGH . ALL RIGHTS RESERVED.
+        </div>
+<div class="flex gap-8">
+<a class="font-['Inter'] uppercase tracking-[0.05em] text-[0.75rem] font-light text-[#2d3435] dark:text-[#f9f9f9] opacity-50 hover:opacity-100 hover:text-[#0053db] transition-opacity hover:underline decoration-2 underline-offset-4" href="#" style="">Instagram</a>
+<a class="font-['Inter'] uppercase tracking-[0.05em] text-[0.75rem] font-light text-[#2d3435] dark:text-[#f9f9f9] opacity-50 hover:opacity-100 hover:text-[#0053db] transition-opacity hover:underline decoration-2 underline-offset-4" href="#" style="">LinkedIn</a>
+<a class="font-['Inter'] uppercase tracking-[0.05em] text-[0.75rem] font-light text-[#2d3435] dark:text-[#f9f9f9] opacity-50 hover:opacity-100 hover:text-[#0053db] transition-opacity hover:underline decoration-2 underline-offset-4" href="#" style="">Behance</a>
+</div>
+</footer>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 bg-[#0c0c0c] text-white z-40 flex flex-col pt-[80px] px-8 transition-transform duration-500 translate-x-full overflow-y-auto pb-8">
+    <div class="flex flex-col w-full mt-4">
+        <a class="py-5 border-b border-white/10 text-[1.35rem] font-black tracking-wide uppercase hover:text-primary transition-colors block" href="../about_nav_linked/code.html">ABOUT</a>
+        <a class="py-5 border-b border-white/10 text-[1.35rem] font-black tracking-wide uppercase hover:text-primary transition-colors block" href="../projects_nav_linked/code.html">PROJECTS</a>
+        <a class="py-5 border-b border-white/10 text-[1.35rem] font-black tracking-wide uppercase hover:text-primary transition-colors block" href="../studio_updated_portrait_alignment/code.html">STUDIO</a>
+        <a class="py-5 border-b border-white/10 text-[1.35rem] font-black tracking-wide uppercase hover:text-primary transition-colors block" href="../strategy_unified_navigation/code.html">STRATEGY</a>
+        <a class="py-5 border-b border-white/10 text-[1.35rem] font-black tracking-wide uppercase hover:text-primary transition-colors block" href="../archives_unified_navigation/code.html">ARCHIVES</a>
+        <a class="py-5 border-b border-white/10 text-[1.35rem] font-black tracking-wide uppercase hover:text-primary transition-colors block" href="../contact_nav_linked/code.html">CONTACT</a>
+    </div>
+
+    <!-- Bottom Buttons Area -->
+    <div class="mt-10 flex flex-col gap-3 w-full max-w-sm">
+        <div class="flex flex-row w-full h-[3.25rem]">
+            <a href="#" class="flex-1 bg-[#f2f2f2] text-black hover:bg-white flex items-center px-4 gap-3 font-bold text-[0.95rem]">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                LinkedIn
+            </a>
+            <a href="../contact_nav_linked/code.html" class="bg-primary hover:bg-blue-700 text-white flex items-center justify-center px-6 font-bold text-[0.95rem] tracking-wide whitespace-nowrap">INQUIRE</a>
+        </div>
+        <div class="flex w-full h-[3.25rem]">
+            <a href="#" class="flex-1 bg-[#f2f2f2] text-black hover:bg-white flex items-center px-4 gap-3 font-bold text-[0.95rem]">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = menuBtn ? menuBtn.querySelector('span') : null;
+
+        if(menuBtn) {
+            menuBtn.addEventListener('click', () => {
+                const isOpen = !mobileMenu.classList.contains('translate-x-full');
+                if (isOpen) {
+                    mobileMenu.classList.add('translate-x-full');
+                    menuIcon.textContent = 'menu';
+                    menuIcon.classList.remove('font-light');
+                    menuIcon.style.fontWeight = "";
+                } else {
+                    mobileMenu.classList.remove('translate-x-full');
+                    menuIcon.textContent = 'close';
+                    menuIcon.style.fontWeight = "200";
+                }
+            });
+
+            // Close menu on link click
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('translate-x-full');
+                    menuIcon.textContent = 'menu';
+                    menuIcon.style.fontWeight = "";
+                });
+            });
+        }
+    });
+</script>
+</body>
+</html>
