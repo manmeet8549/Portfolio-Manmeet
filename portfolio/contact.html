@@ -88,19 +88,24 @@
             outline: none;
             border-bottom-color: #0053db !important;
         }
+        .border-heavy-b { border-bottom: 1px solid #000; }
+        .font-mono { font-family: 'Space Mono', monospace; }
     </style>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body class="bg-surface text-on-surface">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-white">
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-white border-heavy-b">
 <div class="flex items-center w-full px-6 py-4 md:px-8">
-<div class="flex-1"><a class="text-xl font-black tracking-tighter uppercase font-mono text-black hover:text-primary transition-colors" href="index.html">MANMEET SINGH</a></div>
+<div class="flex-1">
+<div class="text-xl font-black tracking-tighter uppercase font-mono" style=""><a href="index.html">MANMEET SINGH</a></div>
+</div>
 <div class="hidden md:flex flex-1 justify-center items-center space-x-12 font-mono text-sm uppercase font-bold">
-<a class="hover:text-primary transition-colors text-black" href="about.html" style="">About</a>
-<a class="hover:text-primary transition-colors text-black" href="projects.html" style="">Projects</a>
-<a class="hover:text-primary transition-colors text-black" href="studio.html" style="">Studio</a>
-<a class="text-primary" href="contact.html" style="">Contact</a>
+<a class="hover:text-primary transition-colors" href="about.html" style="">About</a>
+<a class="hover:text-primary transition-colors" href="projects.html" style="">Projects</a>
+<a class="hover:text-primary transition-colors" href="studio.html" style="">Studio</a>
+<a class="hover:text-primary transition-colors" href="contact.html" style="">Contact</a>
 </div>
 <div class="flex flex-1 justify-end items-center space-x-4">
 <a class="hidden md:block border border-black bg-white text-black px-4 py-2 font-mono text-xs font-bold uppercase hover:bg-primary hover:text-white hover:border-primary transition-colors" href="#" style="">
