@@ -92,7 +92,9 @@
         .border-heavy-b { border-bottom: 1px solid #000; }
         .font-mono { font-family: 'Space Mono', monospace; }
     </style>
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/></head>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>    <style>html, body { overflow-x: auto; }</style>
+    <style>html, body { overflow-x: hidden; }</style>
+</head>
 <body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-white">
 <!-- Navigation -->
 <nav class="fixed top-0 w-full z-50 bg-white border-heavy-b">
@@ -122,7 +124,7 @@
 </nav>
 <main class="pt-[61px]">
 <!-- HEADER SECTION -->
-<section class="bg-inverse-surface min-h-[614px] flex items-end px-8 pb-16 relative overflow-hidden">
+<section class="bg-inverse-surface min-h-[300px] md:min-h-[614px] flex items-end px-8 pb-16 pt-24 md:pt-0 relative overflow-hidden">
 <div class="absolute inset-0 opacity-10 brutalist-grid"></div>
 <div class="container mx-auto grid grid-cols-12 relative z-10">
 <div class="col-span-12">
@@ -149,7 +151,7 @@
 <div class="grid grid-cols-12 mb-16">
 <div class="col-span-12">
 <span class="font-label text-sm font-bold tracking-[0.2em] uppercase text-primary mb-4 block">01 // PROCESS</span>
-<h2 class="text-6xl font-black tracking-tighter uppercase">METHODOLOGY</h2>
+<h2 class="text-[clamp(2rem,10vw,6rem)] font-black tracking-tighter uppercase">METHODOLOGY</h2>
 </div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-5 gap-0 border-t border-outline-variant/30">
