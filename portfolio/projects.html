@@ -114,65 +114,114 @@
             font-family: 'Space Mono', monospace;
         }
 
-        /* Expanding Strips Accordion Gallery */
+        /* ============================================
+           ACCORDION GALLERY — Flex accordion (all projects)
+        ============================================ */
         .accordion-gallery {
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 10px;
             width: 100%;
             height: 400px;
-        }
-
-        @media (min-width: 768px) {
-            .accordion-gallery {
-                flex-direction: row;
-                gap: 1%;
-                height: 100%;
-            }
+            align-items: stretch;
         }
 
         .accordion-strip {
-            flex: 1;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 0;
+            height: 100%;
             position: relative;
             overflow: hidden;
             border-radius: 12px;
-            transition: flex 1s cubic-bezier(0.16, 1, 0.3, 1);
             background: #000;
+            transition: flex-grow 0.5s ease;
+            will-change: flex-grow;
         }
 
-        .accordion-strip:first-child {
-            flex: 4;
-        }
+        .accordion-strip:first-child { flex-grow: 4; }
 
+        .accordion-gallery:hover .accordion-strip { flex-grow: 1; }
+        .accordion-strip:hover { flex-grow: 4 !important; }
+
+        /* Desktop: horizontal strips */
         @media (min-width: 768px) {
-            .accordion-strip:first-child {
-                flex: 6;
+            .accordion-gallery {
+                flex-direction: row;
+                gap: 12px;
+                height: 100%;
+                min-height: 480px;
+            }
+            .accordion-strip:first-child { flex-grow: 6; }
+            .accordion-strip:hover { flex-grow: 6 !important; }
+        }
+
+        /* ============================================
+           MOBILE-GALLERY — FarmSense only
+           Mobile (<480px):  2-col equal grid
+           Tablet (480–767px): 1 large + 2-col × 3-row grid (matches reference)
+           Desktop (768px+):  flex accordion
+        ============================================ */
+
+        /* Mobile + Tablet: 1 large left + 2-col × 3-row grid */
+        .mobile-gallery {
+            display: grid !important;
+            grid-template-columns: 5fr 1fr 1fr;
+            grid-template-rows: repeat(3, 1fr);
+            gap: 6px;
+            height: 480px !important;
+        }
+        .mobile-gallery .accordion-strip {
+            flex-grow: unset;
+            flex-shrink: unset;
+            flex-basis: unset;
+            height: 100%;
+            transition: none;
+        }
+        /* First image: tall, spans all 3 rows on the left */
+        .mobile-gallery .accordion-strip:first-child {
+            grid-column: 1;
+            grid-row: 1 / 4;
+        }
+
+        /* Tablet: wider main image, more height */
+        @media (min-width: 480px) and (max-width: 767px) {
+            .mobile-gallery {
+                grid-template-columns: 2.5fr 1fr 1fr;
+                gap: 8px;
+                height: 650px !important;
             }
         }
 
-        .accordion-gallery:hover .accordion-strip {
-            flex: 1;
-        }
-
-        .accordion-strip:hover {
-            flex: 4 !important;
-        }
-
+        /* Desktop: revert back to flex accordion */
         @media (min-width: 768px) {
-            .accordion-strip:hover {
-                flex: 6 !important;
+            .mobile-gallery {
+                display: flex !important;
+                flex-direction: row;
+                align-items: stretch;
+                gap: 14px;
+                height: 100% !important;
+                min-height: 480px;
             }
+            .mobile-gallery .accordion-strip {
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 0;
+                height: 100%;
+                transition: flex-grow 0.5s ease;
+                will-change: flex-grow;
+            }
+            .mobile-gallery .accordion-strip:first-child { flex-grow: 2.5; }
+            .mobile-gallery:hover .accordion-strip { flex-grow: 1; }
+            .mobile-gallery .accordion-strip:hover { flex-grow: 2.5 !important; }
         }
 
         .accordion-strip img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .accordion-strip:hover img {
-            transform: scale(1.05);
+            object-position: top center;
+            display: block;
         }
 
         .accordion-strip::after {
@@ -354,6 +403,57 @@
                 </div>
             </div>
         </section>
+        <!-- FarmSense AI Project - Expanded Mask Component -->
+        <section class="mb-24 group">
+            <div
+                class="flex flex-col md:flex-row bg-surface-container-low overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-500">
+                <!-- Visual Column (Expanding Strips Accordion) -->
+                <div class="w-full md:w-3/5 relative p-2 bg-black md:min-h-[500px]">
+                    <div class="accordion-gallery mobile-gallery">
+                        <div class="accordion-strip">
+                            <img alt="FarmSense App Dashboard" src="assets/images/projects/FS-dashboard.jpg" />
+                        </div>
+                        <div class="accordion-strip">
+                            <img alt="FarmSense Irrigation" src="assets/images/projects/FS-Irrigation.jpg" />
+                        </div>
+                        <div class="accordion-strip">
+                            <img alt="FarmSense AI Advisor" src="assets/images/projects/FS-Ai.jpg" />
+                        </div>
+                        <div class="accordion-strip">
+                            <img alt="FarmSense Marketplace" src="assets/images/projects/FS-Marketplace.jpg" />
+                        </div>
+                        <div class="accordion-strip">
+                            <img alt="FarmSense Health" src="assets/images/projects/FS-Health.jpg" />
+                        </div>
+                        <div class="accordion-strip">
+                            <img alt="FarmSense Weather" src="assets/images/projects/FS-Weather.jpg" />
+                        </div>
+                        <div class="accordion-strip">
+                            <img alt="FarmSense Insights" src="assets/images/projects/FS-Insights.jpg" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Column -->
+                <div
+                    class="w-full md:w-2/5 p-8 md:p-12 flex flex-col justify-center bg-surface-container-lowest border-l border-primary/5 cursor-pointer" onclick="window.open('https://expo.dev/accounts/manmeet11783/projects/farmsense-ai/builds/469414ec-d323-4235-acd6-b0aec406377e', '_blank')">
+                    <span
+                        class="font-['Inter'] uppercase tracking-[0.2em] text-[0.65rem] text-primary mb-4 block font-bold">Hackathon
+                        Mobile App Project</span>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-monolith uppercase mb-6 leading-[0.9]">FarmSense AI</h2>
+                    <p class="text-on-surface-variant text-base leading-relaxed mb-8 font-light">
+                        FarmSense AI is a production-grade smart farming ecosystem bridging traditional agriculture with AI-driven insights. It features a React Native app for AI crop analysis, an admin web dashboard for centralized monitoring, and custom ESP32 IoT firmware for real-time sensor integration and automated irrigation control.
+                    </p>
+                    <div
+                        class="flex items-center gap-4 text-primary font-bold uppercase tracking-[0.1em] text-xs group/btn">
+                        <a href="https://expo.dev/accounts/manmeet11783/projects/farmsense-ai/builds/469414ec-d323-4235-acd6-b0aec406377e" target="_blank" onclick="event.stopPropagation()" class="flex items-center gap-4">
+                            <span>DOWNLOAD FARMSENSE APP</span>
+                            <span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-2">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- Contact CTA (Brutalist Style) -->
         <section class="mt-60 border-t border-primary/10 pt-32">
             <div class="max-w-4xl">
@@ -461,6 +561,45 @@
                         menuIcon.textContent = 'menu';
                         menuIcon.style.fontWeight = "";
                     });
+                });
+            }
+
+            // Mobile Gallery Grid Interactivity with View Transitions
+            const mobileGallery = document.querySelector('.mobile-gallery');
+            if (mobileGallery) {
+                // Assign unique transition names for the animation API
+                Array.from(mobileGallery.children).forEach((strip, index) => {
+                    strip.style.viewTransitionName = `gallery-item-${index}`;
+                    strip.style.cursor = 'pointer';
+                });
+
+                mobileGallery.addEventListener('click', (e) => {
+                    // Only trigger if we are in grid view (mobile/tablet, < 768px)
+                    if (window.innerWidth >= 768) return;
+                    
+                    const clickedStrip = e.target.closest('.accordion-strip');
+                    if (!clickedStrip || !mobileGallery.contains(clickedStrip)) return;
+                    
+                    const firstStrip = mobileGallery.firstElementChild;
+                    if (clickedStrip === firstStrip) return; // Already featured
+
+                    const swapDOM = () => {
+                        // Physically swap the two DOM nodes
+                        const clickedNext = clickedStrip.nextSibling;
+                        mobileGallery.insertBefore(clickedStrip, firstStrip);
+                        if (clickedNext) {
+                            mobileGallery.insertBefore(firstStrip, clickedNext);
+                        } else {
+                            mobileGallery.appendChild(firstStrip);
+                        }
+                    };
+
+                    // Animate the swap using the native View Transitions API if supported
+                    if (document.startViewTransition) {
+                        document.startViewTransition(swapDOM);
+                    } else {
+                        swapDOM();
+                    }
                 });
             }
         });
