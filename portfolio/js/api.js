@@ -1,7 +1,15 @@
 /**
  * Portfolio API Layer
- * Reusable functions for interacting with Supabase backend.
+ * Handles contact form submissions via Brevo email backend + Supabase database.
  */
+
+/**
+ * Backend server URL for the contact form API.
+ * Update this when deploying to production (e.g., Render, Vercel, etc.)
+ */
+const CONTACT_API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+    ? 'http://localhost:3001/api/contact'
+    : 'https://portfolio-manmeet.onrender.com/api/contact';
 
 /**
  * Validates an email address format.
@@ -14,7 +22,10 @@ function isValidEmail(email) {
 }
 
 /**
- * Submit a contact form message to the Supabase "contacts" table.
+ * Submit a contact form message.
+ * 1. Sends to the backend server (Brevo) for email delivery
+ * 2. Also saves to Supabase as a backup database record
+ * 
  * @param {{ name: string, email: string, subject: string, message: string }} data
  * @returns {Promise<{ success: boolean, error?: string }>}
  */
@@ -33,19 +44,41 @@ async function submitContact(data) {
         return { success: false, error: 'Message is required.' };
     }
 
-    try {
-        const { error } = await supabaseClient
-            .from('contacts')
-            .insert([{
-                name: data.name.trim(),
-                email: data.email.trim(),
-                subject: data.subject ? data.subject.trim() : null,
-                message: data.message.trim()
-            }]);
+    const cleanData = {
+        name: data.name.trim(),
+        email: data.email.trim(),
+        subject: data.subject ? data.subject.trim() : '',
+        message: data.message.trim()
+    };
 
-        if (error) {
-            console.error('Supabase error:', error);
-            return { success: false, error: 'Failed to send message. Please try again.' };
+    try {
+        // 1. Send to backend server (Brevo email delivery)
+        const response = await fetch(CONTACT_API_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(cleanData)
+        });
+
+        const result = await response.json();
+
+        if (!response.ok || !result.success) {
+            console.error('Backend error:', result);
+            return { success: false, error: result.error || 'Failed to send message. Please try again.' };
+        }
+
+        // 2. Also save to Supabase as a database backup (non-blocking)
+        try {
+            await supabaseClient
+                .from('contacts')
+                .insert([{
+                    name: cleanData.name,
+                    email: cleanData.email,
+                    subject: cleanData.subject || null,
+                    message: cleanData.message
+                }]);
+        } catch (dbErr) {
+            // Don't fail the submission if Supabase backup fails
+            console.warn('Supabase backup save failed (non-critical):', dbErr);
         }
 
         return { success: true };
