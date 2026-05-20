@@ -225,55 +225,48 @@ app.post('/api/contact', async (req, res) => {
         message: message.trim()
     };
 
-    try {
-        // 1. Send notification email to site owner
-        await brevoClient.transactionalEmails.sendTransacEmail({
-            sender: {
-                name: process.env.SENDER_NAME,
-                email: process.env.SENDER_EMAIL
-            },
-            to: [{ email: process.env.RECEIVER_EMAIL, name: process.env.SENDER_NAME }],
-            replyTo: { email: cleanData.email, name: cleanData.name },
-            subject: `New Inquiry: ${cleanData.subject || 'No Subject'} — from ${cleanData.name}`,
-            htmlContent: buildOwnerEmailHtml(cleanData)
+    // Send emails in the background to provide an immediate response to the user
+    const ownerEmailPromise = brevoClient.transactionalEmails.sendTransacEmail({
+        sender: {
+            name: process.env.SENDER_NAME,
+            email: process.env.SENDER_EMAIL
+        },
+        to: [{ email: process.env.RECEIVER_EMAIL, name: process.env.SENDER_NAME }],
+        replyTo: { email: cleanData.email, name: cleanData.name },
+        subject: `New Inquiry: ${cleanData.subject || 'No Subject'} — from ${cleanData.name}`,
+        htmlContent: buildOwnerEmailHtml(cleanData)
+    });
+
+    const userEmailPromise = brevoClient.transactionalEmails.sendTransacEmail({
+        sender: {
+            name: process.env.SENDER_NAME,
+            email: process.env.SENDER_EMAIL
+        },
+        to: [{ email: cleanData.email, name: cleanData.name }],
+        subject: `Thanks for reaching out, ${cleanData.name}! — Manmeet Singh`,
+        htmlContent: buildUserConfirmationHtml(cleanData)
+    });
+
+    Promise.all([ownerEmailPromise, userEmailPromise])
+        .then(() => {
+            console.log(`✉️  Notification email sent to ${process.env.RECEIVER_EMAIL}`);
+            console.log(`✉️  Confirmation email sent to ${cleanData.email}`);
+        })
+        .catch(err => {
+            // Parse the Brevo error for useful details
+            const statusCode = err?.statusCode || err?.status || 'unknown';
+            const body = err?.body || err?.response?.body || {};
+            
+            console.error(`\nBrevo API error: Status code: ${statusCode}`);
+            console.error(`Body: ${JSON.stringify(body, null, 2)}`);
+
+            if (statusCode === 401) {
+                console.error('⚠️  FIX: Go to https://app.brevo.com/security/authorised_ips and add your IP, or disable IP whitelisting.');
+            }
         });
-        console.log(`✉️  Notification email sent to ${process.env.RECEIVER_EMAIL}`);
 
-        // 2. Send confirmation email to the user
-        await brevoClient.transactionalEmails.sendTransacEmail({
-            sender: {
-                name: process.env.SENDER_NAME,
-                email: process.env.SENDER_EMAIL
-            },
-            to: [{ email: cleanData.email, name: cleanData.name }],
-            subject: `Thanks for reaching out, ${cleanData.name}! — Manmeet Singh`,
-            htmlContent: buildUserConfirmationHtml(cleanData)
-        });
-        console.log(`✉️  Confirmation email sent to ${cleanData.email}`);
-
-        res.json({ success: true, message: 'Message sent successfully!' });
-
-    } catch (err) {
-        // Parse the Brevo error for useful details
-        const statusCode = err?.statusCode || err?.status || 'unknown';
-        const body = err?.body || err?.response?.body || {};
-        const errorMessage = body?.message || err?.message || 'Unknown error';
-
-        console.error(`\nBrevo API error: Status code: ${statusCode}`);
-        console.error(`Body: ${JSON.stringify(body, null, 2)}`);
-
-        // Provide a user-friendly message based on the error type
-        let userMessage = 'Failed to send email. Please try again later.';
-        if (statusCode === 401) {
-            userMessage = 'Email service authentication failed. Please contact the site owner.';
-            console.error('⚠️  FIX: Go to https://app.brevo.com/security/authorised_ips and add your IP, or disable IP whitelisting.');
-        }
-
-        res.status(500).json({
-            success: false,
-            error: userMessage
-        });
-    }
+    // Immediately respond to user without waiting for emails to finish sending
+    res.json({ success: true, message: 'Message sent successfully!' });
 });
 
 // --- Start Server ---
