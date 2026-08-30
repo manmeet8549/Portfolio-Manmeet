@@ -122,27 +122,37 @@
         .hover-invert:hover * { color: #fff !important; }
         .hover-blue:hover { background-color: #2563EB !important; color: #fff !important; }
     </style>
-    <style>html, body { overflow-x: auto; }</style>
-    <style>html, body { overflow-x: hidden; }</style>
+    
+    
+<style>
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  *, ::before, ::after {
+    box-sizing: border-box;
+  }
+</style>
 </head>
 <body class="bg-background text-on-surface selection:bg-primary selection:text-white">
 <!-- Navigation -->
 <nav class="fixed top-0 w-full z-50 bg-white border-heavy-b">
 <div class="flex items-center w-full px-6 py-4 md:px-8">
 <div class="flex-1">
-<div class="text-xl font-black tracking-tighter uppercase font-mono" style=""><a href="index.html">MANMEET SINGH</a></div>
+<div class="text-xl font-black tracking-tighter uppercase font-mono"><a href="index.html">MANMEET SINGH</a></div>
 </div>
 <div class="hidden md:flex flex-1 justify-center items-center space-x-12 font-mono text-sm uppercase font-bold">
-<a class="hover:text-primary transition-colors" href="about.html" style="">About</a>
-<a class="hover:text-primary transition-colors" href="projects.html" style="">Projects</a>
-<a class="hover:text-primary transition-colors" href="studio.html" style="">Studio</a>
-<a class="hover:text-primary transition-colors" href="contact.html" style="">Contact</a>
+<a class="hover:text-primary transition-colors" href="about.html">About</a>
+<a class="hover:text-primary transition-colors" href="projects.html">Projects</a>
+<a class="hover:text-primary transition-colors" href="studio.html">Studio</a>
+<a class="hover:text-primary transition-colors" href="contact.html">Contact</a>
 </div>
 <div class="flex flex-1 justify-end items-center space-x-4">
-<a class="hidden md:block border border-black bg-white text-black px-4 py-2 font-mono text-xs font-bold uppercase hover:bg-primary hover:text-white hover:border-primary transition-colors" href="https://www.linkedin.com/in/manmeet-singh-0b91262b6" style="">
+<a class="hidden md:block border border-black bg-white text-black px-4 py-2 font-mono text-xs font-bold uppercase hover:bg-primary hover:text-white hover:border-primary transition-colors" href="https://www.linkedin.com/in/manmeet-singh-0b91262b6">
         Linkedin
     </a>
-<a class="hidden md:block border border-black bg-white text-black px-4 py-2 font-mono text-xs font-bold uppercase hover:bg-primary hover:text-white hover:border-primary transition-colors" href="https://github.com/manmeet8549" style="">
+<a class="hidden md:block border border-black bg-white text-black px-4 py-2 font-mono text-xs font-bold uppercase hover:bg-primary hover:text-white hover:border-primary transition-colors" href="https://github.com/manmeet8549">
         Github
     </a>
 <a href="contact.html" class="hidden md:block bg-black text-white px-6 py-2 font-mono text-xs font-bold uppercase hover:bg-primary transition-colors inline-block text-center pt-[10px]">Inquiry →</a>
@@ -230,15 +240,15 @@
 <!-- Stats Section -->
 <section class="grid grid-cols-1 md:grid-cols-3 border-t border-zinc-200 bg-zinc-900 text-white">
 <div class="p-16 border-b md:border-b-0 md:border-r border-zinc-800 flex flex-col justify-center items-center text-center">
-<div class="text-6xl font-black mb-2">10+</div>
+<div class="text-4xl sm:text-6xl font-black mb-2">10+</div>
 <div class="text-sm tracking-widest uppercase font-bold text-zinc-500">Projects</div>
 </div>
 <div class="p-16 bg-primary flex flex-col justify-center items-center text-center">
-<div class="text-6xl font-black mb-2">2+</div>
+<div class="text-4xl sm:text-6xl font-black mb-2">2+</div>
 <div class="text-sm tracking-widest uppercase font-bold text-white/70">Years Experience</div>
 </div>
 <div class="p-16 border-t md:border-t-0 md:border-l border-zinc-800 flex flex-col justify-center items-center text-center">
-<div class="text-6xl font-black mb-2">FAST</div>
+<div class="text-4xl sm:text-6xl font-black mb-2">FAST</div>
 <div class="text-sm tracking-widest uppercase font-bold text-zinc-500">Delivery</div>
 </div>
 </section>

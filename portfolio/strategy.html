@@ -123,27 +123,37 @@
         .border-heavy-b { border-bottom: 1px solid #000; }
         .font-mono { font-family: 'Space Mono', monospace; }
     </style>
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>    <style>html, body { overflow-x: auto; }</style>
-    <style>html, body { overflow-x: hidden; }</style>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>    
+    
+<style>
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  *, ::before, ::after {
+    box-sizing: border-box;
+  }
+</style>
 </head>
 <body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-white">
 <!-- Navigation -->
 <nav class="fixed top-0 w-full z-50 bg-white border-heavy-b">
 <div class="flex items-center w-full px-6 py-4 md:px-8">
 <div class="flex-1">
-<div class="text-xl font-black tracking-tighter uppercase font-mono" style=""><a href="index.html">MANMEET SINGH</a></div>
+<div class="text-xl font-black tracking-tighter uppercase font-mono"><a href="index.html">MANMEET SINGH</a></div>
 </div>
 <div class="hidden md:flex flex-1 justify-center items-center space-x-12 font-mono text-sm uppercase font-bold">
-<a class="hover:text-primary transition-colors" href="about.html" style="">About</a>
-<a class="hover:text-primary transition-colors" href="projects.html" style="">Projects</a>
-<a class="hover:text-primary transition-colors" href="studio.html" style="">Studio</a>
-<a class="hover:text-primary transition-colors" href="contact.html" style="">Contact</a>
+<a class="hover:text-primary transition-colors" href="about.html">About</a>
+<a class="hover:text-primary transition-colors" href="projects.html">Projects</a>
+<a class="hover:text-primary transition-colors" href="studio.html">Studio</a>
+<a class="hover:text-primary transition-colors" href="contact.html">Contact</a>
 </div>
 <div class="flex flex-1 justify-end items-center space-x-4">
-<a class="hidden md:block border border-black bg-white text-black px-4 py-2 font-mono text-xs font-bold uppercase hover:bg-primary hover:text-white hover:border-primary transition-colors" href="https://www.linkedin.com/in/manmeet-singh-0b91262b6" style="">
+<a class="hidden md:block border border-black bg-white text-black px-4 py-2 font-mono text-xs font-bold uppercase hover:bg-primary hover:text-white hover:border-primary transition-colors" href="https://www.linkedin.com/in/manmeet-singh-0b91262b6">
         Linkedin
     </a>
-<a class="hidden md:block border border-black bg-white text-black px-4 py-2 font-mono text-xs font-bold uppercase hover:bg-primary hover:text-white hover:border-primary transition-colors" href="https://github.com/manmeet8549" style="">
+<a class="hidden md:block border border-black bg-white text-black px-4 py-2 font-mono text-xs font-bold uppercase hover:bg-primary hover:text-white hover:border-primary transition-colors" href="https://github.com/manmeet8549">
         Github
     </a>
 <a href="contact.html" class="hidden md:block bg-black text-white px-6 py-2 font-mono text-xs font-bold uppercase hover:bg-primary transition-colors inline-block text-center pt-[10px]">Inquiry →</a>
@@ -157,7 +167,7 @@
 <!-- HEADER SECTION -->
 <section class="bg-inverse-surface min-h-[300px] md:min-h-[614px] flex items-end px-8 pb-16 pt-24 md:pt-0 relative overflow-hidden">
 <div class="absolute inset-0 opacity-10 brutalist-grid"></div>
-<div class="container mx-auto grid grid-cols-12 relative z-10">
+<div class="container mx-auto grid grid-cols-1 md:grid-cols-12 relative z-10 max-w-full px-4 sm:px-8 md:px-12">
 <div class="col-span-12">
 <h1 class="text-[clamp(4rem,15vw,12rem)] font-black tracking-tighter text-white leading-[0.85] uppercase">
                         STRATEGY
@@ -167,7 +177,7 @@
 </section>
 <!-- INTRO SECTION -->
 <section class="py-24 px-8 bg-surface">
-<div class="container mx-auto grid grid-cols-12">
+<div class="container mx-auto grid grid-cols-1 md:grid-cols-12 max-w-full px-4 sm:px-8 md:px-12">
 <div class="col-span-12 md:col-start-7 md:col-span-6">
 <p class="text-3xl md:text-4xl font-semibold tracking-tight leading-tight text-on-surface">
                         A structured approach to solving complex problems through design and technology.
@@ -179,7 +189,7 @@
 <!-- METHODOLOGY SECTION -->
 <section class="py-32 px-8 bg-surface-container-low">
 <div class="container mx-auto">
-<div class="grid grid-cols-12 mb-16">
+<div class="grid grid-cols-1 md:grid-cols-12 mb-16 max-w-full">
 <div class="col-span-12">
 <span class="font-label text-sm font-bold tracking-[0.2em] uppercase text-primary mb-4 block">01 // PROCESS</span>
 <h2 class="text-[clamp(2rem,10vw,6rem)] font-black tracking-tighter uppercase">METHODOLOGY</h2>
@@ -221,7 +231,7 @@
 </section>
 <!-- VISUALS SECTION (Grid & Patterns) -->
 <section class="py-24 px-8 bg-inverse-surface overflow-hidden">
-<div class="container mx-auto grid grid-cols-12 gap-8">
+<div class="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 max-w-full px-4 sm:px-8 md:px-12">
 <div class="col-span-12 md:col-span-8 aspect-[16/9] relative bg-surface-container-highest flex items-center justify-center border-l-[20px] border-primary">
 <img alt="Abstract visual" class="absolute inset-0 w-full h-full object-cover grayscale opacity-50 mix-blend-multiply" data-alt="monochrome architectural photograph of a brutalist concrete building with sharp diagonal shadows and geometric patterns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSX6T4zNlN7dAanhm-78QjyjoUQWuGKBDTE_7dPjm7CorGvigfLxLZQVP36qVXzbTzAgV6_hWprXlO30PbXrgwJUqXg0NZoVNl1kkh0c4pVnXMLwYT39aB4HIVbf_4aag0whboCo7hEMWdW1Rz5Ygfy2RBzoGT5T3rlZy0hAb9RApvj6VTfGJnXmPIbR3Zi_LJ0o57xoz-dzZxdOLm__YW3MT3U0GfqKYyzVgr1s5mO9_097J4kAdvZeiQsaITvYU_UM9kHDcwz_4D"/>
 <div class="relative z-10 p-12 text-white">

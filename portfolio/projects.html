@@ -266,20 +266,34 @@
         .accordion-strip:hover::after {
             opacity: 0;
         }
-    </style>
+    
+    @media (max-width: 479px) {
+      .mobile-gallery {
+        display: flex !important;
+        flex-direction: column !important;
+        height: auto !important;
+        gap: 12px !important;
+      }
+      .mobile-gallery .accordion-strip {
+        height: 220px !important;
+        width: 100% !important;
+      }
+    }
+    
+</style>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet" />
-    <style>
-        html,
-        body {
-            overflow-x: auto;
-        }
-    </style>
-    <style>
-        html,
-        body {
-            overflow-x: hidden;
-        }
-    </style>
+    
+    
+<style>
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  *, ::before, ::after {
+    box-sizing: border-box;
+  }
+</style>
 </head>
 
 <body class="bg-surface text-on-surface min-h-screen">
@@ -291,23 +305,23 @@
     <nav class="fixed top-0 w-full z-50 bg-white border-heavy-b">
         <div class="flex items-center w-full px-6 py-4 md:px-8">
             <div class="flex-1">
-                <div class="text-xl font-black tracking-tighter uppercase font-mono" style=""><a
+                <div class="text-xl font-black tracking-tighter uppercase font-mono"><a
                         href="index.html">MANMEET SINGH</a></div>
             </div>
             <div
                 class="hidden md:flex flex-1 justify-center items-center space-x-12 font-mono text-sm uppercase font-bold">
-                <a class="hover:text-primary transition-colors" href="about.html" style="">About</a>
-                <a class="hover:text-primary transition-colors" href="projects.html" style="">Projects</a>
-                <a class="hover:text-primary transition-colors" href="studio.html" style="">Studio</a>
-                <a class="hover:text-primary transition-colors" href="contact.html" style="">Contact</a>
+                <a class="hover:text-primary transition-colors" href="about.html">About</a>
+                <a class="hover:text-primary transition-colors" href="projects.html">Projects</a>
+                <a class="hover:text-primary transition-colors" href="studio.html">Studio</a>
+                <a class="hover:text-primary transition-colors" href="contact.html">Contact</a>
             </div>
             <div class="flex flex-1 justify-end items-center space-x-4">
                 <a class="hidden md:block border border-black bg-white text-black px-4 py-2 font-mono text-xs font-bold uppercase hover:bg-primary hover:text-white hover:border-primary transition-colors"
-                    href="https://www.linkedin.com/in/manmeet-singh-0b91262b6" style="">
+                    href="https://www.linkedin.com/in/manmeet-singh-0b91262b6">
                     Linkedin
                 </a>
                 <a class="hidden md:block border border-black bg-white text-black px-4 py-2 font-mono text-xs font-bold uppercase hover:bg-primary hover:text-white hover:border-primary transition-colors"
-                    href="https://github.com/manmeet8549" style="">
+                    href="https://github.com/manmeet8549">
                     Github
                 </a>
                 <a href="contact.html"
@@ -321,180 +335,263 @@
             </div>
         </div>
     </nav>
-    <main class="pt-40 pb-24 px-12 max-w-[1440px] mx-auto">
+    <main class="pt-28 md:pt-40 pb-16 md:pb-24 px-4 sm:px-8 md:px-12 max-w-full md:max-w-[1440px] mx-auto">
         <!-- Header Section -->
         <header class="mb-32">
-            <h1 class="text-[clamp(2rem,8vw,6rem)] leading-[0.85] font-extrabold text-primary uppercase mb-6" style="">
+            <h1 class="text-[clamp(2rem,8vw,6rem)] leading-[0.85] font-extrabold text-primary uppercase mb-6">
                 PROJECTS
             </h1>
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
-                <p class="font-['Inter'] uppercase tracking-[0.2em] text-sm font-light opacity-60" style="">
+                <p class="font-['Inter'] uppercase tracking-[0.2em] text-sm font-light opacity-60">
                     SELECTED WORKS 2022—2024
                 </p>
                 <!-- Filter Section -->
                 <div class="flex gap-10 font-['Inter'] text-[0.75rem] font-bold tracking-[0.1em] uppercase">
-                    <button class="text-primary border-b-2 border-primary pb-1" style="">ALL</button>
-                    <button class="text-on-surface opacity-40 hover:opacity-100 transition-opacity"
-                        style="">WEB</button>
-                    <button class="text-on-surface opacity-40 hover:opacity-100 transition-opacity" style="">AI</button>
-                    <button class="text-on-surface opacity-40 hover:opacity-100 transition-opacity"
-                        style="">DESIGN</button>
+                    <button class="text-primary border-b-2 border-primary pb-1">ALL</button>
+                    <button class="text-on-surface opacity-40 hover:opacity-100 transition-opacity">WEB</button>
+                    <button class="text-on-surface opacity-40 hover:opacity-100 transition-opacity">AI</button>
+                    <button class="text-on-surface opacity-40 hover:opacity-100 transition-opacity">DESIGN</button>
                 </div>
             </div>
         </header>
-        <!-- Featured Project (Horizontal Split) -->
-        <section class="mb-24 group">
-            <div
-                class="flex flex-col md:flex-row bg-surface-container-low overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-500">
-                <!-- Visual Column (Expanding Strips Accordion) -->
-                <div class="w-full md:w-3/5 relative min-h-[400px] md:min-h-[500px] p-2 bg-black">
-                    <div class="accordion-gallery">
-                        <div class="accordion-strip">
-                            <img alt="22G Roofing Hero" src="assets/images/projects/22g_hero.png" />
+        <!-- Projects Section - Aceternity Following Pointer Cards -->
+        <section class="mb-24 space-y-12">
+
+            <!-- Top Grid: App & Automation Projects (FarmSense AI & Telegram Lead Generator) -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <!-- Spot 1: FarmSense AI -->
+                <div class="follower-pointer-card group relative flex flex-row items-stretch w-full overflow-hidden rounded-2xl border border-zinc-200 bg-white transition duration-300 hover:shadow-2xl cursor-none" onclick="window.open('https://expo.dev/accounts/manmeet11783/projects/farmsense-ai/builds/469414ec-d323-4235-acd6-b0aec406377e', '_blank')">
+                    
+                    <!-- Follower Pointer Badge -->
+                    <div class="follower-pointer pointer-events-none absolute top-0 left-0 z-50 transition-opacity duration-200 ease-out opacity-0 scale-50 will-change-transform">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="1" viewBox="0 0 16 16" class="h-6 w-6 -translate-x-[12px] -translate-y-[10px] -rotate-[70deg] transform stroke-sky-600 text-sky-500" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"></path>
+                        </svg>
+                        <div class="min-w-max rounded-full bg-purple-500 px-3 py-1.5 text-xs whitespace-nowrap text-white font-bold flex items-center space-x-2 shadow-lg">
+                            <img src="assets/images/manmeet-singh.jpeg" class="w-5 h-5 rounded-full border-2 border-white object-cover" alt="Manmeet Singh" />
+                            <span>Manmeet Singh</span>
                         </div>
-                        <div class="accordion-strip">
-                            <img alt="Services View" src="assets/images/projects/22g_services_real.png" />
+                    </div>
+
+                    <!-- Left Column: Tight Dark Phone Wrapper (Image Left across all viewports) -->
+                    <div class="w-[125px] xs:w-[145px] sm:w-[170px] shrink-0 bg-gradient-to-b from-[#061e18] to-[#0c2a21] p-1.5 sm:p-3 flex items-center justify-center border-r border-zinc-200">
+                        <div class="relative w-full h-[220px] xs:h-[260px] sm:h-[320px] lg:h-[360px] flex items-center justify-center">
+                            <img src="assets/images/projects/FS-dashboard.jpg" alt="FarmSense Dashboard" class="h-full w-auto max-w-full rounded-xl shadow-2xl border border-white/20 object-contain transform transition duration-300 group-hover:scale-105" />
                         </div>
-                        <div class="accordion-strip">
-                            <img alt="Credentials View" src="assets/images/projects/22g_credentials.png" />
+                    </div>
+
+                    <!-- Right Column: Information & Details -->
+                    <div class="grow min-w-0 p-3.5 sm:p-6 flex flex-col justify-between">
+                        <div>
+                            <span class="font-mono text-[0.65rem] sm:text-xs font-bold uppercase tracking-widest text-primary mb-1 sm:mb-2 block">Hackathon Mobile App Project</span>
+                            <h2 class="text-base sm:text-xl font-extrabold text-zinc-900 mb-1.5 sm:mb-3 group-hover:text-primary transition-colors">FARMSENSE AI</h2>
+                            <p class="text-[0.72rem] sm:text-xs font-normal text-zinc-600 leading-relaxed mb-3 sm:mb-5 line-clamp-4 sm:line-clamp-none">
+                                FarmSense AI is a production-grade smart farming ecosystem bridging traditional agriculture with AI-driven insights. It features a React Native app for AI crop analysis, an admin web dashboard for centralized monitoring, and custom ESP32 IoT firmware for real-time sensor integration and automated irrigation control.
+                            </p>
+
+                            <!-- Tech Feature Badges -->
+                            <div class="flex flex-wrap gap-1 sm:gap-1.5 mb-3 sm:mb-6 font-mono text-[0.6rem] sm:text-[0.7rem]">
+                                <span class="px-2 py-0.5 bg-zinc-100 text-zinc-800 rounded-md font-semibold border border-zinc-200">React Native</span>
+                                <span class="px-2 py-0.5 bg-zinc-100 text-zinc-800 rounded-md font-semibold border border-zinc-200">ESP32 IoT</span>
+                                <span class="px-2 py-0.5 bg-zinc-100 text-zinc-800 rounded-md font-semibold border border-zinc-200">AI Crop Analysis</span>
+                                <span class="px-2 py-0.5 bg-zinc-100 text-zinc-800 rounded-md font-semibold border border-zinc-200">Automated Irrigation</span>
+                            </div>
                         </div>
-                        <div class="accordion-strip">
-                            <img alt="Contact View" src="assets/images/projects/22g_contact_real.png" />
+
+                        <!-- Footer Action -->
+                        <div class="flex items-center justify-between pt-2.5 sm:pt-3 border-t border-zinc-100 mt-auto">
+                            <span class="text-[0.65rem] sm:text-xs font-mono font-bold text-zinc-400">2026 / AI & IOT</span>
+                            <div class="relative z-10 block rounded-xl bg-black px-3 py-1.5 sm:px-5 sm:py-2 text-[0.7rem] sm:text-xs font-bold text-white group-hover:bg-primary transition-colors cursor-none whitespace-nowrap">
+                                Download App
+                            </div>
                         </div>
-                        <div class="accordion-strip">
-                            <img alt="Footer View" src="assets/images/projects/22g_footer.png" />
+                    </div>
+
+                </div>
+
+                <!-- Spot 2: Telegram Lead Generator Bot -->
+                <div class="follower-pointer-card group relative flex flex-row items-stretch w-full overflow-hidden rounded-2xl border border-zinc-200 bg-white transition duration-300 hover:shadow-2xl cursor-none">
+                    
+                    <!-- Follower Pointer Badge -->
+                    <div class="follower-pointer pointer-events-none absolute top-0 left-0 z-50 transition-opacity duration-200 ease-out opacity-0 scale-50 will-change-transform">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="1" viewBox="0 0 16 16" class="h-6 w-6 -translate-x-[12px] -translate-y-[10px] -rotate-[70deg] transform stroke-sky-600 text-sky-500" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"></path>
+                        </svg>
+                        <div class="min-w-max rounded-full bg-blue-600 px-3 py-1.5 text-xs whitespace-nowrap text-white font-bold flex items-center space-x-2 shadow-lg">
+                            <img src="assets/images/manmeet-singh.jpeg" class="w-5 h-5 rounded-full border-2 border-white object-cover" alt="Manmeet Singh" />
+                            <span>Manmeet Singh</span>
+                        </div>
+                    </div>
+
+                    <!-- Left Column: Tight Dark Telegram Wrapper (Image Left across all viewports) -->
+                    <div class="w-[125px] xs:w-[145px] sm:w-[170px] shrink-0 bg-gradient-to-b from-[#0e1621] to-[#17212b] p-1.5 sm:p-3 flex items-center justify-center border-r border-zinc-200">
+                        <div class="relative w-full h-[220px] xs:h-[260px] sm:h-[320px] lg:h-[360px] flex items-center justify-center">
+                            <img src="assets/images/projects/telegram_bot_hero.png" alt="Telegram Lead Generator Bot" class="h-full w-auto max-w-full rounded-xl shadow-2xl border border-white/20 object-contain transform transition duration-300 group-hover:scale-105" />
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Information & Details -->
+                    <div class="grow min-w-0 p-3.5 sm:p-6 flex flex-col justify-between">
+                        <div>
+                            <span class="font-mono text-[0.65rem] sm:text-xs font-bold uppercase tracking-widest text-primary mb-1 sm:mb-2 block">Automation & AI Bot</span>
+                            <h2 class="text-base sm:text-xl font-extrabold text-zinc-900 mb-1.5 sm:mb-3 group-hover:text-primary transition-colors">TELEGRAM LEAD GENERATOR</h2>
+                            <p class="text-[0.72rem] sm:text-xs font-normal text-zinc-600 leading-relaxed mb-3 sm:mb-5 line-clamp-4 sm:line-clamp-none">
+                                An automated AI lead generation bot that scrapes Google Maps via Apify, deduplicates and cleans business contacts, checks search history to prevent duplicate deliveries, creates shareable Google Sheets, and exports CSV files with real-time Telegram status updates.
+                            </p>
+
+                            <!-- Tech Feature Badges -->
+                            <div class="flex flex-wrap gap-1 sm:gap-1.5 mb-3 sm:mb-6 font-mono text-[0.6rem] sm:text-[0.7rem]">
+                                <span class="px-2 py-0.5 bg-zinc-100 text-zinc-800 rounded-md font-semibold border border-zinc-200">Node.js</span>
+                                <span class="px-2 py-0.5 bg-zinc-100 text-zinc-800 rounded-md font-semibold border border-zinc-200">Telegram Bot API</span>
+                                <span class="px-2 py-0.5 bg-zinc-100 text-zinc-800 rounded-md font-semibold border border-zinc-200">Apify Scraper</span>
+                                <span class="px-2 py-0.5 bg-zinc-100 text-zinc-800 rounded-md font-semibold border border-zinc-200">Google Sheets API</span>
+                                <span class="px-2 py-0.5 bg-zinc-100 text-zinc-800 rounded-md font-semibold border border-zinc-200">Docker</span>
+                            </div>
+                        </div>
+
+                        <!-- Footer Action -->
+                        <div class="flex items-center justify-between pt-2.5 sm:pt-3 border-t border-zinc-100 mt-auto">
+                            <span class="text-[0.65rem] sm:text-xs font-mono font-bold text-zinc-400">2025 / AUTOMATION</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Bottom Grid: Web Projects (Think Vids, 22G Roofing & Nirog Organic) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Spot 3: Think Vids -->
+                <div class="follower-pointer-card group relative flex flex-col justify-between h-full overflow-hidden rounded-2xl border border-zinc-200 bg-white transition duration-300 hover:shadow-2xl cursor-none" onclick="window.open('https://thinkvids.com/', '_blank')">
+                    
+                    <!-- Follower Pointer Badge -->
+                    <div class="follower-pointer pointer-events-none absolute top-0 left-0 z-50 transition-opacity duration-200 ease-out opacity-0 scale-50 will-change-transform">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="1" viewBox="0 0 16 16" class="h-6 w-6 -translate-x-[12px] -translate-y-[10px] -rotate-[70deg] transform stroke-sky-600 text-sky-500" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"></path>
+                        </svg>
+                        <div class="min-w-max rounded-full bg-emerald-600 px-3 py-1.5 text-xs whitespace-nowrap text-white font-bold flex items-center space-x-2 shadow-lg">
+                            <img src="assets/images/manmeet-singh.jpeg" class="w-5 h-5 rounded-full border-2 border-white object-cover" alt="Manmeet Singh" />
+                            <span>Manmeet Singh</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <!-- Single Main Image Box -->
+                        <div class="relative aspect-[16/10] w-full overflow-hidden rounded-t-2xl bg-zinc-100 p-2">
+                            <img src="assets/images/projects/thinknext_hero.png" alt="Think Vids" class="h-full w-full transform object-cover transition duration-300 group-hover:scale-95 group-hover:rounded-2xl" />
+                        </div>
+                        
+                        <!-- Card Body -->
+                        <div class="p-6">
+                            <span class="font-mono text-xs font-bold uppercase tracking-widest text-primary mb-2 block">Internship Web Project</span>
+                            <h2 class="text-xl font-bold text-zinc-900 mb-3 group-hover:text-primary transition-colors">Think Vids</h2>
+                            <p class="text-sm font-normal text-zinc-600 leading-relaxed mb-6">
+                                A SaaS platform where companies and teams collaborate in separate workspaces to create AI-powered videos from scripts, manage video production, publish content, and control access through role-based portals (RBAC).
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card Footer -->
+                    <div class="p-6 pt-0 mt-auto flex flex-row items-center justify-between">
+                        <span class="text-xs font-mono font-bold text-zinc-400">2025 / SAAS PLATFORM</span>
+                        <div class="relative z-10 block rounded-xl bg-black px-5 py-2.5 text-xs font-bold text-white group-hover:bg-primary transition-colors cursor-none">
+                            View Website
                         </div>
                     </div>
                 </div>
 
-                <!-- Content Column -->
-                <div
-                    class="w-full md:w-2/5 p-8 md:p-12 flex flex-col justify-center bg-surface-container-lowest border-l border-primary/5 cursor-pointer" onclick="window.open('https://sales22groofing.com.au/', '_blank')">
-                    <span
-                        class="font-['Inter'] uppercase tracking-[0.2em] text-[0.65rem] text-primary mb-4 block font-bold">Featured
-                        Web Project</span>
-                    <h2 class="text-4xl md:text-5xl font-extrabold text-monolith uppercase mb-6 leading-[0.9]">22G
-                        ROOFING</h2>
-                    <p class="text-on-surface-variant text-base leading-relaxed mb-8 font-light">
-                        A premium digital platform built for a leading Australian roofing firm. This real-world
-                        implementation features a high-conversion inquiry system, comprehensive service documentation,
-                        and a mobile-optimized interface built to modern web standards.
-                    </p>
-                    <div
-                        class="flex items-center gap-4 text-primary font-bold uppercase tracking-[0.1em] text-xs group/btn">
-                        <span>VIEW LIVE WEBSITE</span>
-                        <span
-                            class="material-symbols-outlined transition-transform group-hover/btn:translate-x-2">arrow_forward</span>
+                <!-- Spot 4: 22G Roofing -->
+                <div class="follower-pointer-card group relative flex flex-col justify-between h-full overflow-hidden rounded-2xl border border-zinc-200 bg-white transition duration-300 hover:shadow-2xl cursor-none" onclick="window.open('https://sales22groofing.com.au/', '_blank')">
+                    
+                    <!-- Follower Pointer Badge -->
+                    <div class="follower-pointer pointer-events-none absolute top-0 left-0 z-50 transition-opacity duration-200 ease-out opacity-0 scale-50 will-change-transform">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="1" viewBox="0 0 16 16" class="h-6 w-6 -translate-x-[12px] -translate-y-[10px] -rotate-[70deg] transform stroke-sky-600 text-sky-500" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"></path>
+                        </svg>
+                        <div class="min-w-max rounded-full bg-emerald-500 px-3 py-1.5 text-xs whitespace-nowrap text-white font-bold flex items-center space-x-2 shadow-lg">
+                            <img src="assets/images/manmeet-singh.jpeg" class="w-5 h-5 rounded-full border-2 border-white object-cover" alt="Manmeet Singh" />
+                            <span>Manmeet Singh</span>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
-        <!-- Nirog Organic Project - Expanded Mask Component -->
-        <section class="mb-24 group">
-            <div
-                class="flex flex-col md:flex-row bg-surface-container-low overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-500">
-                <!-- Visual Column (Expanding Strips Accordion) -->
-                <div class="w-full md:w-3/5 relative min-h-[400px] md:min-h-[500px] p-2 bg-black">
-                    <div class="accordion-gallery">
-                        <div class="accordion-strip">
-                            <img alt="Nirog Hero" src="assets/images/projects/nirog_hero.png" />
+
+                    <div>
+                        <!-- Single Main Image Box -->
+                        <div class="relative aspect-[16/10] w-full overflow-hidden rounded-t-2xl bg-zinc-100 p-2">
+                            <img src="assets/images/projects/22g_hero.png" alt="22G Roofing" class="h-full w-full transform object-cover transition duration-300 group-hover:scale-95 group-hover:rounded-2xl" />
                         </div>
-                        <div class="accordion-strip">
-                            <img alt="Services View" src="assets/images/projects/nirog_login.png" />
+                        
+                        <!-- Card Body -->
+                        <div class="p-6">
+                            <span class="font-mono text-xs font-bold uppercase tracking-widest text-primary mb-2 block">Featured Web Project</span>
+                            <h2 class="text-xl font-bold text-zinc-900 mb-3 group-hover:text-primary transition-colors">22G ROOFING</h2>
+                            <p class="text-sm font-normal text-zinc-600 leading-relaxed mb-6">
+                                A premium digital platform built for a leading Australian roofing firm. Features a high-conversion inquiry system, comprehensive service documentation, and mobile-optimized architecture.
+                            </p>
                         </div>
-                        <div class="accordion-strip">
-                            <img alt="Credentials View" src="assets/images/projects/nirog_products.png" />
-                        </div>
-                        <div class="accordion-strip">
-                            <img alt="Contact View" src="assets/images/projects/nirog_checkout.png" />
+                    </div>
+
+                    <!-- Card Footer -->
+                    <div class="p-6 pt-0 mt-auto flex flex-row items-center justify-between">
+                        <span class="text-xs font-mono font-bold text-zinc-400">2024 / COMMERCIAL</span>
+                        <div class="relative z-10 block rounded-xl bg-black px-5 py-2.5 text-xs font-bold text-white group-hover:bg-primary transition-colors cursor-none">
+                            View Website
                         </div>
                     </div>
                 </div>
 
-                <!-- Content Column -->
-                <div
-                    class="w-full md:w-2/5 p-8 md:p-12 flex flex-col justify-center bg-surface-container-lowest border-l border-primary/5 cursor-pointer" onclick="window.open('https://nirog-organic.vercel.app/', '_blank')">
-                    <span
-                        class="font-['Inter'] uppercase tracking-[0.2em] text-[0.65rem] text-primary mb-4 block font-bold">First
-                        Web Project</span>
-                    <h2 class="text-4xl md:text-5xl font-extrabold text-monolith uppercase mb-6 leading-[0.9]">Nirog Organic</h2>
-                    <p class="text-on-surface-variant text-base leading-relaxed mb-8 font-light">
-                        A modern e-commerce platform showcasing organic, chemical-free food products sourced directly from farmers.
-                        The website highlights traditional processes like stone-grinding and wood-pressing, ensuring purity and nutrition.
-                        Designed with a clean UI, it emphasizes sustainability, traceability, and heritage, delivering a seamless user experience for 
-                        discovering and purchasing authentic organic essentials.
-                    </p>
-                    <div
-                        class="flex items-center gap-4 text-primary font-bold uppercase tracking-[0.1em] text-xs group/btn">
-                        <span>VIEW LIVE WEBSITE</span>
-                        <span
-                            class="material-symbols-outlined transition-transform group-hover/btn:translate-x-2">arrow_forward</span>
+                <!-- Spot 5: Nirog Organic -->
+                <div class="follower-pointer-card group relative flex flex-col justify-between h-full overflow-hidden rounded-2xl border border-zinc-200 bg-white transition duration-300 hover:shadow-2xl cursor-none" onclick="window.open('https://nirog-organic.vercel.app/', '_blank')">
+                    
+                    <!-- Follower Pointer Badge -->
+                    <div class="follower-pointer pointer-events-none absolute top-0 left-0 z-50 transition-opacity duration-200 ease-out opacity-0 scale-50 will-change-transform">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="1" viewBox="0 0 16 16" class="h-6 w-6 -translate-x-[12px] -translate-y-[10px] -rotate-[70deg] transform stroke-sky-600 text-sky-500" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"></path>
+                        </svg>
+                        <div class="min-w-max rounded-full bg-blue-500 px-3 py-1.5 text-xs whitespace-nowrap text-white font-bold flex items-center space-x-2 shadow-lg">
+                            <img src="assets/images/manmeet-singh.jpeg" class="w-5 h-5 rounded-full border-2 border-white object-cover" alt="Manmeet Singh" />
+                            <span>Manmeet Singh</span>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
-        <!-- FarmSense AI Project - Expanded Mask Component -->
-        <section class="mb-24 group">
-            <div
-                class="flex flex-col md:flex-row bg-surface-container-low overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-500">
-                <!-- Visual Column (Expanding Strips Accordion) -->
-                <div class="w-full md:w-3/5 relative p-2 bg-black md:min-h-[500px]">
-                    <div class="accordion-gallery mobile-gallery">
-                        <div class="accordion-strip">
-                            <img alt="FarmSense App Dashboard" src="assets/images/projects/FS-dashboard.jpg" />
+
+                    <div>
+                        <!-- Single Main Image Box -->
+                        <div class="relative aspect-[16/10] w-full overflow-hidden rounded-t-2xl bg-zinc-100 p-2">
+                            <img src="assets/images/projects/nirog_hero.png" alt="Nirog Organic" class="h-full w-full transform object-cover transition duration-300 group-hover:scale-95 group-hover:rounded-2xl" />
                         </div>
-                        <div class="accordion-strip">
-                            <img alt="FarmSense Irrigation" src="assets/images/projects/FS-Irrigation.jpg" />
+                        
+                        <!-- Card Body -->
+                        <div class="p-6">
+                            <span class="font-mono text-xs font-bold uppercase tracking-widest text-primary mb-2 block">First Web Project</span>
+                            <h2 class="text-xl font-bold text-zinc-900 mb-3 group-hover:text-primary transition-colors">Nirog Organic</h2>
+                            <p class="text-sm font-normal text-zinc-600 leading-relaxed mb-6">
+                                A modern e-commerce platform showcasing organic, chemical-free food products sourced directly from farmers. Highlights stone-grinding and wood-pressing processes with a clean UI.
+                            </p>
                         </div>
-                        <div class="accordion-strip">
-                            <img alt="FarmSense AI Advisor" src="assets/images/projects/FS-Ai.jpg" />
-                        </div>
-                        <div class="accordion-strip">
-                            <img alt="FarmSense Marketplace" src="assets/images/projects/FS-Marketplace.jpg" />
-                        </div>
-                        <div class="accordion-strip">
-                            <img alt="FarmSense Health" src="assets/images/projects/FS-Health.jpg" />
-                        </div>
-                        <div class="accordion-strip">
-                            <img alt="FarmSense Weather" src="assets/images/projects/FS-Weather.jpg" />
-                        </div>
-                        <div class="accordion-strip">
-                            <img alt="FarmSense Insights" src="assets/images/projects/FS-Insights.jpg" />
+                    </div>
+
+                    <!-- Card Footer -->
+                    <div class="p-6 pt-0 mt-auto flex flex-row items-center justify-between">
+                        <span class="text-xs font-mono font-bold text-zinc-400">2025 / E-COMMERCE</span>
+                        <div class="relative z-10 block rounded-xl bg-black px-5 py-2.5 text-xs font-bold text-white group-hover:bg-primary transition-colors cursor-none">
+                            View Website
                         </div>
                     </div>
                 </div>
 
-                <!-- Content Column -->
-                <div
-                    class="w-full md:w-2/5 p-8 md:p-12 flex flex-col justify-center bg-surface-container-lowest border-l border-primary/5 cursor-pointer" onclick="window.open('https://expo.dev/accounts/manmeet11783/projects/farmsense-ai/builds/469414ec-d323-4235-acd6-b0aec406377e', '_blank')">
-                    <span
-                        class="font-['Inter'] uppercase tracking-[0.2em] text-[0.65rem] text-primary mb-4 block font-bold">Hackathon
-                        Mobile App Project</span>
-                    <h2 class="text-4xl md:text-5xl font-extrabold text-monolith uppercase mb-6 leading-[0.9]">FarmSense AI</h2>
-                    <p class="text-on-surface-variant text-base leading-relaxed mb-8 font-light">
-                        FarmSense AI is a production-grade smart farming ecosystem bridging traditional agriculture with AI-driven insights. It features a React Native app for AI crop analysis, an admin web dashboard for centralized monitoring, and custom ESP32 IoT firmware for real-time sensor integration and automated irrigation control.
-                    </p>
-                    <div
-                        class="flex items-center gap-4 text-primary font-bold uppercase tracking-[0.1em] text-xs group/btn">
-                        <a href="https://expo.dev/accounts/manmeet11783/projects/farmsense-ai/builds/469414ec-d323-4235-acd6-b0aec406377e" target="_blank" onclick="event.stopPropagation()" class="flex items-center gap-4">
-                            <span>DOWNLOAD FARMSENSE APP</span>
-                            <span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-2">arrow_forward</span>
-                        </a>
-                    </div>
-                </div>
             </div>
+
         </section>
         <!-- Contact CTA (Brutalist Style) -->
         <section class="mt-60 border-t border-primary/10 pt-32">
             <div class="max-w-4xl">
-                <span class="font-['Inter'] uppercase tracking-[0.2em] text-[0.75rem] text-primary mb-8 block font-bold"
-                    style="">Get In Touch</span>
-                <h2 class="text-[clamp(2.5rem,6vw,5rem)] font-extrabold text-monolith uppercase leading-[0.9] mb-12"
-                    style="">
+                <span class="font-['Inter'] uppercase tracking-[0.2em] text-[0.75rem] text-primary mb-8 block font-bold">Get In Touch</span>
+                <h2 class="text-[clamp(2.5rem,6vw,5rem)] font-extrabold text-monolith uppercase leading-[0.9] mb-12">
                     START A CONVERSATION ABOUT YOUR NEXT PROJECT.
                 </h2>
-                <a class="inline-block text-2xl font-bold uppercase tracking-tight border-b-4 border-primary pb-2 hover:text-primary transition-colors"
-                    href="mailto:manmeetsinghvirdi41@gmail.com" style="">
+                <a class="inline-block text-base sm:text-xl md:text-2xl font-bold uppercase tracking-tight border-b-4 border-primary pb-2 hover:text-primary transition-colors max-w-full break-all"
+                    href="mailto:manmeetsinghvirdi41@gmail.com">
                     MANMEETSINGHVIRDI41@GMAIL.COM
                 </a>
             </div>
@@ -503,20 +600,19 @@
     <!-- Footer -->
     <footer
         class="bg-[#f9f9f9] dark:bg-[#2d3435] w-full rounded-0 border-0 flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8 border-t border-[#0053db]/10">
-        <div class="text-lg font-bold text-[#2d3435] dark:text-[#f9f9f9]" style="">MANMEET SINGH</div>
-        <div class="font-['Inter'] uppercase tracking-[0.05em] text-[0.75rem] font-light text-[#2d3435] dark:text-[#f9f9f9] opacity-50"
-            style="">
+        <div class="text-lg font-bold text-[#2d3435] dark:text-[#f9f9f9]">MANMEET SINGH</div>
+        <div class="font-['Inter'] uppercase tracking-[0.05em] text-[0.75rem] font-light text-[#2d3435] dark:text-[#f9f9f9] opacity-50">
             © 2024 MANMEET SINGH . ALL RIGHTS RESERVED.
         </div>
         <div class="flex gap-8">
             <a class="font-['Inter'] uppercase tracking-[0.05em] text-[0.75rem] font-light text-[#2d3435] dark:text-[#f9f9f9] opacity-50 hover:opacity-100 hover:text-[#0053db] transition-opacity hover:underline decoration-2 underline-offset-4"
-                href="https://github.com/manmeet8549" style="">GitHub</a>
+                href="https://github.com/manmeet8549">GitHub</a>
             <a class="font-['Inter'] uppercase tracking-[0.05em] text-[0.75rem] font-light text-[#2d3435] dark:text-[#f9f9f9] opacity-50 hover:opacity-100 hover:text-[#0053db] transition-opacity hover:underline decoration-2 underline-offset-4"
-                href="https://www.linkedin.com/in/manmeet-singh-0b91262b6" style="">LinkedIn</a>
+                href="https://www.linkedin.com/in/manmeet-singh-0b91262b6">LinkedIn</a>
             <a class="font-['Inter'] uppercase tracking-[0.05em] text-[0.75rem] font-light text-[#2d3435] dark:text-[#f9f9f9] opacity-50 hover:opacity-100 hover:text-[#0053db] transition-opacity hover:underline decoration-2 underline-offset-4"
-                href="https://www.instagram.com/manmeet_singh_virdi_/" style="">Instagram</a>
+                href="https://www.instagram.com/manmeet_singh_virdi_/">Instagram</a>
             <a class="font-['Inter'] uppercase tracking-[0.05em] text-[0.75rem] font-light text-[#2d3435] dark:text-[#f9f9f9] opacity-50 hover:opacity-100 hover:text-[#0053db] transition-opacity hover:underline decoration-2 underline-offset-4"
-                href="https://x.com/Manmeet__Singh_" style="">X (Twitter)</a>
+                href="https://x.com/Manmeet__Singh_">X (Twitter)</a>
         </div>
     </footer>
 
@@ -634,6 +730,47 @@
                     }
                 });
             }
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const cards = document.querySelectorAll(".follower-pointer-card");
+            cards.forEach((card) => {
+                const pointer = card.querySelector(".follower-pointer");
+                if (!pointer) return;
+
+                let rafId = null;
+                let targetX = 0;
+                let targetY = 0;
+
+                const updatePointer = () => {
+                    pointer.style.transform = `translate3d(${targetX}px, ${targetY}px, 0)`;
+                    rafId = null;
+                };
+
+                card.addEventListener("mousemove", (e) => {
+                    const rect = card.getBoundingClientRect();
+                    targetX = e.clientX - rect.left;
+                    targetY = e.clientY - rect.top;
+                    if (!rafId) {
+                        rafId = requestAnimationFrame(updatePointer);
+                    }
+                });
+
+                card.addEventListener("mouseenter", (e) => {
+                    const rect = card.getBoundingClientRect();
+                    targetX = e.clientX - rect.left;
+                    targetY = e.clientY - rect.top;
+                    pointer.style.transform = `translate3d(${targetX}px, ${targetY}px, 0)`;
+                    pointer.classList.remove("opacity-0", "scale-50");
+                    pointer.classList.add("opacity-100", "scale-100");
+                });
+
+                card.addEventListener("mouseleave", () => {
+                    pointer.classList.remove("opacity-100", "scale-100");
+                    pointer.classList.add("opacity-0", "scale-50");
+                });
+            });
         });
     </script>
 </body>

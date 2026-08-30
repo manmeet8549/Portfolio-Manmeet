@@ -130,6 +130,16 @@
         .hover-invert:hover * { color: #fff !important; }
         .hover-blue:hover { background-color: #2563EB !important; color: #fff !important; }
     </style>
+<style>
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  *, ::before, ::after {
+    box-sizing: border-box;
+  }
+</style>
 </head>
 <body class="bg-white text-black font-body selection:bg-primary selection:text-white overflow-x-hidden">
 <!-- Navigation -->
@@ -191,31 +201,31 @@
 </div>
 </section>
 <!-- Marquee/Transition -->
-<div class="border-heavy-b py-4 bg-primary text-white overflow-hidden whitespace-nowrap">
+<div class="border-heavy-b py-4 bg-primary text-white overflow-hidden whitespace-nowrap max-w-full">
 <div class="flex space-x-12 animate-marquee font-black uppercase text-4xl tracking-tighter">
-<span class="">Selected Works</span>
+<span>Selected Works</span>
 <span class="opacity-30">Archive</span>
-<span class="">Independent Studio</span>
+<span>Independent Studio</span>
 <span class="opacity-30">Brutalist Design</span>
-<span class="">Digital Solutions</span>
+<span>Digital Solutions</span>
 <span class="opacity-30">NYC Based</span>
 </div>
 </div>
 <!-- Stats Section - Monolithic Blocks -->
 <section class="neo-grid">
-<div class="col-span-12 md:col-span-4 p-12 border-heavy-r border-heavy-b flex flex-col justify-between aspect-square hover-invert transition-all cursor-default">
+<div class="col-span-12 md:col-span-4 p-6 py-8 md:p-12 border-heavy-r border-heavy-b flex flex-col justify-between aspect-auto md:aspect-square gap-3 md:gap-0 hover-invert transition-all cursor-default">
 <span class="font-mono text-xs font-bold uppercase tracking-widest">Delivered</span>
-<h2 class="text-9xl font-black tracking-tighter">02+</h2>
+<h2 class="text-5xl sm:text-7xl md:text-9xl font-black tracking-tighter my-2 md:my-0">02+</h2>
 <p class="font-mono text-xs font-bold uppercase">Commercial Projects</p>
 </div>
-<div class="col-span-12 md:col-span-4 p-12 bg-primary text-white border-heavy-r border-heavy-b flex flex-col justify-between aspect-square hover:bg-black transition-all cursor-default group">
+<div class="col-span-12 md:col-span-4 p-6 py-8 md:p-12 bg-primary text-white border-heavy-r border-heavy-b flex flex-col justify-between aspect-auto md:aspect-square gap-3 md:gap-0 hover:bg-black transition-all cursor-default group">
 <span class="font-mono text-xs font-bold uppercase tracking-widest opacity-80">Experience</span>
-<h2 class="text-9xl font-black tracking-tighter">01+</h2>
+<h2 class="text-5xl sm:text-7xl md:text-9xl font-black tracking-tighter my-2 md:my-0">01+</h2>
 <p class="font-mono text-xs font-bold uppercase opacity-80">Years </p>
 </div>
-<div class="col-span-12 md:col-span-4 p-12 border-heavy-b flex flex-col justify-between aspect-square hover-invert transition-all cursor-default">
+<div class="col-span-12 md:col-span-4 p-6 py-8 md:p-12 border-heavy-b flex flex-col justify-between aspect-auto md:aspect-square gap-3 md:gap-0 hover-invert transition-all cursor-default">
 <span class="font-mono text-xs font-bold uppercase tracking-widest">Efficiency</span>
-<h2 class="text-9xl font-black tracking-tighter">99%</h2>
+<h2 class="text-5xl sm:text-7xl md:text-9xl font-black tracking-tighter my-2 md:my-0">99%</h2>
 <p class="font-mono text-xs font-bold uppercase">Success Rating</p>
 </div>
 </section>
@@ -223,7 +233,7 @@
 <section class="neo-grid border-heavy-b">
 <!-- Vertical Heading Block -->
 <div class="col-span-12 md:col-span-2 border-heavy-r p-8 flex md:flex-col justify-between items-start">
-<h2 class="text-6xl md:text-8xl font-black uppercase tracking-tighter md:[writing-mode:vertical-lr] md:rotate-180">
+<h2 class="text-4xl sm:text-6xl md:text-8xl font-black uppercase tracking-tighter md:[writing-mode:vertical-lr] md:rotate-180">
                 PROJECTS
             </h2>
 <div class="hidden md:block w-full h-24 bg-primary halftone-blue"></div>
@@ -260,19 +270,22 @@
 </div>
 </section>
 <!-- CTA Section -->
-<section class="bg-white p-12 md:p-24 border-heavy-b flex flex-col items-center text-center relative overflow-hidden">
+<section class="bg-white p-6 sm:p-12 md:p-24 border-heavy-b flex flex-col items-center text-center relative overflow-hidden max-w-full">
 <div class="halftone absolute inset-0 opacity-5"></div>
 <div class="relative z-10 max-w-6xl w-full">
 <h2 class="text-[14vw] md:text-[10vw] font-black tracking-tighter leading-[0.8] uppercase mb-12">
                 LET'S <span class="text-primary">START</span><br/>
                 CONVERSATION
             </h2>
-<div class="flex flex-col md:flex-row gap-4 justify-center">
-<a href="contact.html" class="bg-black text-white px-16 py-8 text-2xl font-black uppercase tracking-tighter hover:bg-primary transition-all active:scale-95 inline-block text-center">
+<div class="flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-center">
+<a href="contact.html" class="w-full sm:w-auto border border-black bg-black text-white px-8 md:px-12 py-5 md:py-6 text-xl md:text-2xl font-black uppercase tracking-tighter hover:bg-primary hover:border-primary transition-all active:scale-95 inline-block text-center">
                     Drop a Message
                 </a>
-<a href="assets/Manmeet_Singh_Resume.pdf" download="Manmeet_Singh_Resume.pdf" class="border-heavy px-16 py-8 text-2xl font-black uppercase tracking-tighter hover:bg-black hover:text-white transition-all active:scale-95 inline-block text-center">
-                    Download CV
+<a href="assets/Manmeet_Singh_Resume.pdf" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto border border-black bg-white text-black px-8 md:px-12 py-5 md:py-6 text-xl md:text-2xl font-black uppercase tracking-tighter hover:bg-primary hover:text-white hover:border-primary transition-all active:scale-95 inline-block text-center">
+                    View Resume
+                </a>
+<a href="assets/Manmeet_Singh_Resume.pdf" download="Manmeet_Singh_Resume.pdf" class="w-full sm:w-auto border border-black bg-white text-black px-8 md:px-12 py-5 md:py-6 text-xl md:text-2xl font-black uppercase tracking-tighter hover:bg-black hover:text-white transition-all active:scale-95 inline-block text-center">
+                    Download Resume
                 </a>
 </div>
 </div>
@@ -303,10 +316,10 @@
 </div>
 </div>
 <div class="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center opacity-40">
-<span class="">©2025 Manmeet Singh. All rights reserved.</span>
+<span>©2025 Manmeet Singh. All rights reserved.</span>
 <div class="flex gap-8 mt-4 md:mt-0">
-<span class=""><br/></span>
-<span class="">40.7128° N, 74.0060° W</span>
+<span><br/></span>
+<span>40.7128° N, 74.0060° W</span>
 </div>
 </div>
 </footer>
