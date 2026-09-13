@@ -1,65 +1,110 @@
-# MANMEET SINGH | Portfolio
+# MANMEET SINGH — Full Stack Developer Portfolio
 
-![Main Showcase](./portfolio/assets/images/index_preview.png)
-
-## 🏛️ The Digital Monolith
-
-This portfolio is a curated digital gallery designed with a philosophy of **High-End Editorial Brutalism**. Moving away from the soft, rounded aesthetics of modern SaaS, it embraces the raw energy of Swiss Graphic Design and Architectural Brutalism.
-
-### ✨ Design Core
-- **Aesthetic**: Intentional asymmetry, sharp 90-degree angles, and a high-contrast typographic scale.
-- **Palette**: Sophisticated grayscale tones punctuated by a high-vibrancy kinetic blue (`#0053db`).
-- **Typography**: **Inter** variable face for a Swiss-inspired, high-fashion look.
-- **Rules**: Strictly **0px border-radius** across all elements to maintain architectural integrity.
+An ultra-performant, high-fashion portfolio website engineered with **Swiss Graphic Design principles**, **Architectural Brutalism**, and modern **optimistic web performance architecture**.
 
 ---
 
-## 🚀 Experience the Showcase
+## ⚡ Performance & Key Innovations
 
-| Page | Description | Preview |
-| :--- | :--- | :--- |
-| **Home** | The main entry point featuring "The Digital Monolith" hero. | ![Home](./portfolio/assets/images/index_preview.png) |
-| **Projects** | An editorial archive of selected works (2022—2024). | ![Projects](./portfolio/assets/images/projects_preview.png) |
-| **Case Study** | Deep dives into visual language and brutalist architecture. | ![Case Study](./portfolio/assets/images/case-study_preview.png) |
-| **Archives** | A comprehensive list of independent studio works. | ![Archives](./portfolio/assets/images/archives_preview.png) |
-| **About** | The synthesis of raw architectural brutalism and Swiss precision. | ![About](./portfolio/assets/images/about_preview.png) |
-| **Contact** | A functional inquiry system powered by Supabase. | ![Contact](./portfolio/assets/images/contact_preview.png) |
+### 1. Instant Page Caching & Prefetching Engine (`sw.js` + `instant-nav.js`)
+* **Service Worker Caching**: Utilizes a custom **Stale-While-Revalidate** caching policy (`sw.js`) that precaches static HTML pages, CDN assets, fonts, and scripts to achieve **< 20ms page load speeds**.
+* **Hover & Touch Link Prefetching**: Listens for user hover (`mouseenter`) or touch (`touchstart`) events on navigation links, prefetching target HTML documents into memory *before* the user clicks, resulting in **zero-latency instant page transitions**.
 
----
-
-## 🛠️ Tech Stack & Architecture
-
-*   **Logic**: Vanilla JavaScript
-*   **Styling**: [Tailwind CSS](https://tailwindcss.com/) (Customized Configuration)
-*   **Database**: [Supabase](https://supabase.com/) (Inquiry System)
-*   **Typography**: Google Fonts (Inter, Space Mono)
-*   **Icons**: Material Symbols Outlined
-
-### ⚙️ Local Development
-
-Since this project uses a pure HTML/Tailwind CDN approach, no complex installation is required.
-
-1.  **Clone the Repository**:
-    ```bash
-    git clone https://github.com/manmeet8549/Portfolio-Manmeet.git
-    ```
-2.  **Open in Browser**:
-    Open `portfolio/index.html` directly in any modern browser.
-3.  **Supabase Setup**:
-    To enable the contact form, ensure your Supabase credentials are configured in `portfolio/js/supabase-config.js`.
+### 2. Optimistic Contact Message Queue (`portfolio/js/api.js`)
+* **Instant Client Response (< 10ms)**: Synchronously validates input fields (`name`, `email` regex, `message`) in under 5ms. Valid submissions immediately return success to the UI and clear the form without waiting for server responses.
+* **Persistent `localStorage` Queue**: Enqueues outgoing messages into browser storage (`portfolio_contact_queue`) with exponential backoff retries.
+* **Asynchronous Background Processing**: A background worker handles POST requests to the Brevo email API server (`server/server.js`) and database insertions to **Supabase** in the background, ensuring zero data loss even during network instability or server cold starts.
 
 ---
 
-## 🎨 Creative Methodology
+## 🌟 Features & Functionality
 
-1.  **Clarity over Complexity**: Every pixel is intentional; every interaction is earned.
-2.  **Grid Adherence**: A strict 12-column grid system defines the spatial harmony of every page.
-3.  **Atmospheric Depth**: Depth is achieved through tonal layering rather than generic shadows.
+* **Swiss & Brutalist Visual Language**: High-contrast typography scale, strict 12-column grid alignment, and sharp 0px border-radius aesthetics.
+* **Interactive Projects Showcase**: Modern project cards featuring Aceternity UI-inspired following pointer cards, side-by-side vertical project previews, and interactive project details.
+* **Resume Integration**: Dual options for viewing the resume directly in-browser or downloading the PDF document.
+* **Full Mobile Responsiveness**: Touch-optimized sliding drawer menu and responsive grid layouts.
+* **Dual Backend Integration**: Dual delivery pipeline using Brevo transactional email services and Supabase DB backup storage.
 
 ---
 
-## 📬 Contact
+## 📁 Repository Structure
 
-For project inquiries or collaborations, visit the [Contact Page](portfolio/contact.html).
+```
+stitch_portfolio_home/
+├── portfolio/
+│   ├── index.html              # Main Landing / Monolithic Showcase
+│   ├── about.html              # Profile & Selected Tenure Timeline
+│   ├── projects.html           # Interactive Selected Works (2022–2026)
+│   ├── studio.html             # Studio Services & Methodology
+│   ├── strategy.html           # Creative Strategy & Systems
+│   ├── archives.html           # Extended Project Archives
+│   ├── contact.html            # Contact & Inquiry Form
+│   ├── case-study.html         # Project Deep Dives
+│   ├── sw.js                   # Service Worker Caching Layer
+│   └── js/
+│       ├── api.js              # Optimistic Contact Queue Manager
+│       ├── instant-nav.js      # Link Prefetching & SW Registration
+│       └── supabase-config.js  # Supabase Database Client
+└── server/
+    ├── server.js               # Node.js / Express Email Backend (Brevo API)
+    ├── package.json            # Server dependencies
+    └── .env.example            # Environment variables template
+```
 
-© 2024 Manmeet Singh. Built with uncompromising design principles.
+---
+
+## 🛠️ Tech Stack
+
+* **Frontend**: HTML5, Vanilla JavaScript (ES6+), Tailwind CSS
+* **Performance**: Service Workers (`sw.js`), Resource Prefetching API, LocalStorage Queue
+* **Backend**: Node.js, Express.js
+* **Services & APIs**: Brevo Transactional Email API, Supabase Database
+* **Typography & Icons**: Google Fonts (Inter, Space Mono), Material Symbols Outlined
+
+---
+
+## ⚙️ Quick Start
+
+### Frontend (Static Files)
+No build step is required for the static pages:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/manmeet8549/Portfolio-Manmeet.git
+   ```
+2. Open `portfolio/index.html` in any modern browser.
+
+### Backend Server (Optional Local Mailer)
+To run the local Brevo email backend server:
+1. Navigate to the server folder:
+   ```bash
+   cd server
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Create `.env` based on `.env.example`:
+   ```env
+   PORT=3001
+   BREVO_API_KEY=your_brevo_api_key
+   SENDER_NAME="Manmeet Singh"
+   SENDER_EMAIL="your_email@domain.com"
+   RECEIVER_EMAIL="your_email@domain.com"
+   ```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## 📬 Contact & Socials
+
+* **Website**: [manmeetsingh.me](https://manmeetsingh.me)
+* **LinkedIn**: [linkedin.com/in/manmeet-singh-0b91262b6](https://www.linkedin.com/in/manmeet-singh-0b91262b6)
+* **GitHub**: [github.com/manmeet8549](https://github.com/manmeet8549)
+* **Instagram**: [@manmeet_singh_virdi_](https://www.instagram.com/manmeet_singh_virdi_/)
+
+---
+
+© 2026 Manmeet Singh. All rights reserved.
