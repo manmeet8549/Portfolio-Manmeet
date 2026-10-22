@@ -4,7 +4,7 @@
  * stylesheets, fonts, and scripts to enable instant page loads (< 20ms).
  */
 
-const CACHE_NAME = 'portfolio-cache-v1';
+const CACHE_NAME = 'portfolio-cache-v2';
 
 // Static resources to precache immediately on service worker install
 const PRECACHE_RESOURCES = [
